@@ -26,10 +26,22 @@
 
 /* ------------------------------------ base.html */
 
-.brand-logo {
-    position: relative;
+nav .brand-logo {
     margin-left: 1rem;
 }
 
+@media only screen and (max-width: 600px) {
+	nav .brand-logo {
+        font-size: 16px;
+    }
+}
 
+.page-footer {
+    margin-top: 2rem;
+}
+
+.social-link {
+    font-size: 2rem;
+    padding-right: 2rem;
+}
 
