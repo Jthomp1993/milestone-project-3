@@ -19,11 +19,9 @@ mongo = PyMongo(app)
 
 
 @app.route("/")
-@app.route("/get_recommendations")
-def get_recommendations():
-    recommendations = mongo.db.recommendations.find()
-    return render_template(
-        "recommendations.html", recommendations=recommendations)
+def index():
+    """ Route to the Home page """
+    return render_template("index.html")
 
 
 if __name__ == "__main__":
