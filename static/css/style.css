@@ -45,3 +45,26 @@ nav .brand-logo {
     padding-right: 2rem;
 }
 
+.social-link a {
+    color: #ffffff;
+    
+}
+
+.social-link i:hover {
+	color: #D1D1D1;
+}
+
+/* ------------------------------------ index.html */
+
+.hero-image {
+    text-align: center;
+	height: 70vh;
+    background-image: url(../images/register.jpg);
+    background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+}
+
