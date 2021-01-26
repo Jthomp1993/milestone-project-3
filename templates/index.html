@@ -3,7 +3,7 @@
 {% block content %}
     <div class="hero-image"></div>
 
-    <div class="container card-container">
+    <div class="container card-container" id="card-wrapper">
         <div class="row center-align raleway">
             <div class="col s12 card-heading bold text-color">
                 <span>Welcome To Explore London</span>
@@ -21,5 +21,27 @@
         </div>
     </div>
 
+    <!-- For loop to pull data from MongoDB and create category cards -->
+    <div class="container" id="categories-wrapper">
+    <div class="row">
+        {% for category in categories %}
+        <div class="col m6 xl3 s12">
+            <div class="card">
+                <div class="card-image">
+                    <img src="{{ category.category_image }}" alt="{{ category.category_name }}">
+                </div>
+                <div class="card-title text-color raleway bold">
+                    <h2>{{ category.category_name }}</h2>
+                </div>
+                <div class="card-info raleway text-color">
+                    <p>{{ category.category_info }}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    </div>
+    
+    
 
 {% endblock %}

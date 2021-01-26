@@ -19,9 +19,10 @@ mongo = PyMongo(app)
 
 
 @app.route("/")
-def index():
-    """ Route to the Home page """
-    return render_template("index.html")
+@app.route("/get_categories")
+def get_categories():
+    categories = mongo.db.categories.find()
+    return render_template("index.html", categories=categories)
 
 
 if __name__ == "__main__":
