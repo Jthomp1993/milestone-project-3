@@ -41,6 +41,33 @@
         {% endfor %}
     </div>
     </div>
+
+    <div class="container" id="recommendations-wrapper">
+        <div class="row">
+            {% for recommendation in recommendations %}
+            <div class="col s12 m4">
+                <div class="recommendations raleway text-color shadow">
+                    <div class="recommendations-image">
+                        <img src="{{ recommendation.recommend_image }}" alt="">
+                    </div>
+                    <div class="recommendations-category">
+                        <h3>{{ recommendation.recommend_category }}</h3>
+                    </div>
+                    <div class="recommendations-title">
+                        <h2>{{ recommendation.recommend_name }}</h2>
+                    </div>
+                    <div class="recommendations-info">
+                        <p>{{ recommendation.recommend_info }}</p>
+                    </div>
+                    <hr>
+                    <div class="created-by">
+                        <p><i>{{ recommendation.created_by }} on {{ recommendation.recommend_date }} </i> </p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
     
     
 

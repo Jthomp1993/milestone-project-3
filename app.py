@@ -22,7 +22,9 @@ mongo = PyMongo(app)
 @app.route("/get_categories")
 def get_categories():
     categories = mongo.db.categories.find()
-    return render_template("index.html", categories=categories)
+    recommendations = list(
+        mongo.db.recommendations.find().sort("recommend_date", -1))
+    return render_template("index.html", categories=categories, recommendations=recommendations)
 
 
 if __name__ == "__main__":

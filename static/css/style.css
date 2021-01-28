@@ -95,6 +95,7 @@ nav .brand-logo {
     font-size: 1rem;
 }
 
+/*--- Media query for medium sized screens ---*/
 @media only screen and (max-width: 992px) {
     .card-heading {
     font-size: 2rem;
@@ -121,6 +122,7 @@ nav .brand-logo {
 }
 }
 
+/*--------------------------------------- Categories section / index.html */
 .card-title h2 {
     font-size: 1.5rem;
     font-weight: 700;
@@ -191,6 +193,91 @@ nav .brand-logo {
     
 }
 }
+
+/*--------------------------------------- Recommendations section / index.html */
+
+.recommendations {
+    background-color: #ffffff;
+    margin-bottom: 2rem;
+}
+
+.recommendations-image {
+    height: 14rem;
+    overflow: hidden;
+}
+
+.recommendations-image img {
+    width: 100%;
+	
+}
+
+.recommendations-category h3 {
+    font-size: 18px;
+    padding-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.recommendations-title h2 {
+    font-size: 18px;
+    font-weight: 700;
+    padding-left: 10px;
+    margin-top: 1px;
+}
+
+.recommendations-info p {
+    font-size: 14px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 1rem;
+    height: 5rem;
+}
+
+.created-by p {
+    font-size: 12px;
+    font-weight: 300;
+    padding-left: 10px;
+    height: 2rem;
+}
+
+/* --- Media query for medium screen sizes --- */
+@media only screen and (max-width: 992px) {
+    .recommendations-image {
+    height: 9rem;
+    overflow: hidden;
+}
+    .recommendations-category h3 {
+    font-size: 16px;
+    
+}
+    .recommendations-title h2 {
+    font-size: 16px;
+    
+    
+}
+    .recommendations-title {
+    height: 2rem;
+}
+}
+
+/* --- Media query for small screen sizes --- */
+@media only screen and (max-width: 600px) {
+    .recommendations-image {
+    height: 15rem;
+}
+}
+
+/*--- Media query for Ipad Pro ---- */
+@media only screen and (min-width: 993px) and (max-width: 1200px) {
+    .recommendations-image {
+    height: 10rem;
+}
+    .recommendations-title {
+    height: 2.5rem;
+}
+}
+
+
 
 
 
