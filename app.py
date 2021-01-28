@@ -24,7 +24,16 @@ def get_categories():
     categories = mongo.db.categories.find()
     recommendations = list(
         mongo.db.recommendations.find().sort("recommend_date", -1))
-    return render_template("index.html", categories=categories, recommendations=recommendations)
+    return render_template(
+        "index.html", categories=categories, recommendations=recommendations)
+
+
+@app.route("/view_recommendation/<recommendation_id>")
+def view_recommendation(recommendation_id):
+    recommendation = mongo.db.recommendations.find_one(
+            {"_id": ObjectId(recommendation_id)})
+    return render_template(
+            "recommendation.html", recommendation=recommendation)
 
 
 if __name__ == "__main__":

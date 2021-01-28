@@ -41,10 +41,11 @@
         {% endfor %}
     </div>
     </div>
-
+    
     <div class="container" id="recommendations-wrapper">
         <div class="row">
             {% for recommendation in recommendations %}
+            <a href="{{ url_for('view_recommendation', recommendation_id=recommendation._id) }}">
             <div class="col s12 m4">
                 <div class="recommendations raleway text-color shadow">
                     <div class="recommendations-image">
@@ -65,6 +66,7 @@
                     </div>
                 </div>
             </div>
+            </a>
             {% endfor %}
         </div>
     </div>
