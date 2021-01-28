@@ -62,7 +62,7 @@ nav .brand-logo {
 	color: #D1D1D1;
 }
 
-/* ------------------------------------ index.html */
+/* -------------------------------------------------- index.html */
 
 .hero-image {
     text-align: center;
@@ -277,7 +277,12 @@ nav .brand-logo {
 }
 }
 
+/* -------------------------------------------------- recommendation.html */
 
+.recommendation-heading h2 {
+    margin-top: 1rem;
+    font-size: 3rem;
+}
 
 
 
