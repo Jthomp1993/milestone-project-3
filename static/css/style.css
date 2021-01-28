@@ -284,6 +284,47 @@ nav .brand-logo {
     font-size: 3rem;
 }
 
+.recommendation-card {
+    width: 90vw;
+    background-color: #2E2E2E;
+    margin-top: 1rem;
+}
+
+.recommend-name h2 {
+    color: #ffffff;
+    font-size: 2rem;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.recommend-description p {
+    color: #ffffff;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.recommend-author p {
+    color: #ffffff;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.recommend-image {
+    height: 14rem;
+    overflow: hidden;
+}
+
+.recommend-image img {
+    width: 90%;
+}
+
+.divider {
+    height: 2rem;
+    background-color: #2E2E2E;
+}
+
+
+
 
 
 
