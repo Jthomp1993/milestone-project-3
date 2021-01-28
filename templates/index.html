@@ -25,15 +25,15 @@
     <div class="container" id="categories-wrapper">
     <div class="row">
         {% for category in categories %}
-        <div class="col m6 xl3 s12">
-            <div class="card">
+        <div class="col m6 xl3 s6">
+            <div class="card shadow">
                 <div class="card-image">
                     <img src="{{ category.category_image }}" alt="{{ category.category_name }}">
                 </div>
                 <div class="card-title text-color raleway bold">
                     <h2>{{ category.category_name }}</h2>
                 </div>
-                <div class="card-info raleway text-color">
+                <div class="card-info raleway text-color hide-on-small-only">
                     <p>{{ category.category_info }}</p>
                 </div>
             </div>

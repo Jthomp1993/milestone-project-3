@@ -24,6 +24,10 @@
     color: #494949;
 }
 
+.shadow {
+    box-shadow: 5px 4px 4px #aaaaaa;
+}
+
 /* ------------------------------------ base.html */
 
 body {
@@ -75,7 +79,7 @@ nav .brand-logo {
 
 .card-container {
     margin-top: 4rem;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
     height: 20rem;
     background-color: #ffffff;
     width: 60vw;
@@ -103,7 +107,7 @@ nav .brand-logo {
 	height: 50vh;  
 }
 }
-
+/*--- Media query for small screen sizes ---*/
 @media only screen and (max-width: 600px) {
     .card-heading {
     font-size: 2.5rem;
@@ -165,10 +169,17 @@ nav .brand-logo {
     width: 95vw;
 }
     .card-image {
-    height: 15rem;
+    height: 7rem;
     overflow: hidden;
 }
+    .card-title {
+        height: 2.5rem;
+    }
+    .card-title h2 {
+        font-size: 18px;
+    }
 }
+    
 /*--- Media query for Ipad Pro ---- */
 @media only screen and (min-width: 993px) and (max-width: 1200px) {
       .card-image {
