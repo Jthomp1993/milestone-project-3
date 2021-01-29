@@ -431,8 +431,7 @@ nav .brand-logo {
 
 /* -------------------------------------------------- registration.html */
 
-.register-image {
-    text-align: center;
+#register-body {
 	min-height: 82vh;
     background-image: url(../images/register.jpg);
     background-repeat: no-repeat;
@@ -441,6 +440,21 @@ nav .brand-logo {
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
     -o-background-size: cover;
+    
+}
+
+.register-form {
+    margin-top: 5rem;
+}
+
+/* I used the following article to make the form div transparent 
+https://stackoverflow.com/questions/11807286/how-to-make-div-background-color-transparent-in-css */
+.card-panel {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+#register-wrapper {
+    width: 50vw;
 }
 
 /* --- Media query for small screen sizes --- */
@@ -451,6 +465,17 @@ nav .brand-logo {
     .register-image {
         height: 85vh;
     }
+    .page-container {
+        position: relative;
+        min-height: 100vh;
+}
+
+    .page-footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        margin-top: 10rem;
+}
 }
 
 /* --- Media query for medium screen sizes --- */
@@ -475,6 +500,18 @@ nav .brand-logo {
     .page-footer {
         margin-top: 0px;
 }
+    .page-container {
+        position: relative;
+        min-height: 100vh;
+}
+
+    .page-footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        margin-top: 10rem;
+}
+
 }
 
 
