@@ -23,12 +23,15 @@
                     <p class="raleway text-color"><i>Created by: {{ recommendation.created_by }}</i></p>
                 </div>
                 <div class="recommend-image center-align">
-                    <img src="{{ recommendation.recommend_image }}" alt="">
-                </div>
-                <div class="divider">
-
+                    <img class="shadow" src="{{ recommendation.recommend_image }}" alt="">
                 </div>
             </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="s12 center-align">
+            <a href="{{ url_for('get_categories') }}" class="waves-effect waves-light btn">Back to home</a>
         </div>
     </div>
 

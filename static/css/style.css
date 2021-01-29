@@ -282,31 +282,33 @@ nav .brand-logo {
 .recommendation-heading h2 {
     margin-top: 1rem;
     font-size: 3rem;
+    margin-bottom: 1rem;
 }
 
 .recommendation-card {
     width: 90vw;
-    background-color: #2E2E2E;
+    background-color: #ffffff;
     margin-top: 1rem;
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
 }
 
 .recommend-name h2 {
-    color: #ffffff;
     font-size: 2rem;
-    padding-left: 10px;
-    padding-top: 10px;
+    padding-left: 1rem;
+    padding-top: 1rem;
+    margin-top: 0px;
 }
 
 .recommend-description p {
-    color: #ffffff;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 .recommend-author p {
-    color: #ffffff;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
 }
 
 .recommend-image {
@@ -321,6 +323,14 @@ nav .brand-logo {
 .divider {
     height: 2rem;
     background-color: #2E2E2E;
+}
+
+.heading-row {
+    margin-bottom: 0px;
+}
+
+.btn {
+    background-color: #2e2e2e;
 }
 
 
