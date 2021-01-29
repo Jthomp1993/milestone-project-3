@@ -17,14 +17,14 @@
         <!--Navbar-->
         <nav>
             <div class="nav-wrapper raleway primary">
-            <a href="#!" class="brand-logo">Explore London</a>
+            <a href="{{ url_for('get_categories') }}" class="brand-logo">Explore London</a>
             <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
             <ul class="right hide-on-med-and-down">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="#">Profile</a></li>
                 <li><a href="#">Add Recommendation</a></li>
                 <li><a href="#">Login</a></li>
-                <li><a href="#">Register</a></li>
+                <li><a href="{{ url_for('register') }}">Register</a></li>
             </ul>
             </div>
         </nav>

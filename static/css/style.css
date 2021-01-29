@@ -396,7 +396,6 @@ nav .brand-logo {
 }
 
 /* --- Media query for large screen sizes ---*/ 
-
 @media only screen and (min-width: 1200px) {
     .recommendation-card {
     width: 100%;
@@ -427,6 +426,54 @@ nav .brand-logo {
         padding-left: 3rem;
         padding-right: 3rem;
         padding-bottom: 1rem;
+}
+}
+
+/* -------------------------------------------------- registration.html */
+
+.register-image {
+    text-align: center;
+	min-height: 82vh;
+    background-image: url(../images/register.jpg);
+    background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+/* --- Media query for small screen sizes --- */
+@media only screen and (max-width: 600px) {
+    .page-footer {
+        margin-top: 0px;
+}
+    .register-image {
+        height: 85vh;
+    }
+}
+
+/* --- Media query for medium screen sizes --- */
+@media only screen and (min-width: 600px) and (max-width: 992px){
+    .page-footer {
+        margin-top: 0px;
+}
+    .register-image {
+        height: 90vh;
+    }
+}
+
+/*--- Media query for Ipad Pro ---- */
+@media only screen and (min-width: 993px) and (max-width: 1200px){
+    .register-image {
+        height: 90vh;
+    }
+}
+
+/* --- Media query for large screen sizes ---*/ 
+@media only screen and (min-width: 1200px) and (max-width: 1800px) {
+    .page-footer {
+        margin-top: 0px;
 }
 }
 
