@@ -12,6 +12,7 @@
     <title>Explore London</title>
 </head>
 <body class="base-body">
+<div class="div page-container">
     <header>
         <!--Navbar-->
         <nav>
@@ -43,7 +44,7 @@
 
     <!--Footer section-->
     <footer class="page-footer primary">
-        <div class="container primary valign-wrapper">
+        <div class="container footer primary valign-wrapper">
             <div class="row">
                 <div class="col s3 social-link">
                     <a href="https://en-gb.facebook.com/" target="_blank">
@@ -79,5 +80,6 @@
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
     {% block scripts %}
     {% endblock %}
+</div>
 </body>
 </html>

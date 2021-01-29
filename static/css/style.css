@@ -31,7 +31,7 @@
 /* ------------------------------------ base.html */
 
 body {
-    background-color: #efefef;
+    background-color: #e7e7e7;
 }
 
 nav .brand-logo {
@@ -296,13 +296,13 @@ nav .brand-logo {
 .recommend-name h2 {
     font-size: 2rem;
     padding-left: 1rem;
-    padding-top: 1rem;
+    padding-top: 2rem;
     margin-top: 0px;
 }
 
 .recommend-description p {
     padding-left: 1rem;
-    padding-right: 1rem;
+    padding-right: 1rem;;
 }
 
 .recommend-author p {
@@ -333,8 +333,102 @@ nav .brand-logo {
     background-color: #2e2e2e;
 }
 
+/* --- Media query for medium screen sizes --- */
+@media only screen and (min-width: 600px) and (max-width: 992px) {
+    #recommendation-wrapper {
+        width: 90vw;
+}
+    .recommend-image {
+    height: 25rem;
+}
+    .recommend-image img {
+    width: 95%;
+}
+    .btn {
+    margin-bottom: 2.5rem;
+}
+/* I used the following article to write the code below to keep the footer at the bottom of the page 
+   https://www.freecodecamp.org/news/how-to-keep-your-footer-where-it-belongs-59c6aa05c59c/ */
 
+    .page-container {
+        position: relative;
+        min-height: 100vh;
+}
 
+    .page-footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        margin-top: 10rem;
+}
+
+}
+
+/*--- Media query for Ipad Pro ---- */
+@media only screen and (min-width: 993px) and (max-width: 1200px) {
+    #recommendation-wrapper {
+        width: 90vw;
+}
+    .recommend-image {
+        height: 25rem;
+}
+    .recommend-image img {
+        width: 95%;
+}
+    .btn {
+        margin-bottom: 2.5rem;
+}
+
+/* I used the following article to write the code below to keep the footer at the bottom of the page 
+   https://www.freecodecamp.org/news/how-to-keep-your-footer-where-it-belongs-59c6aa05c59c/ */
+
+    .page-container {
+        position: relative;
+        min-height: 100vh;
+}
+
+    .page-footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        margin-top: 10rem;
+}   
+}
+
+/* --- Media query for large screen sizes ---*/ 
+
+@media only screen and (min-width: 1200px) {
+    .recommendation-card {
+    width: 100%;
+    
+    
+}
+    #recommendation-wrapper {
+        width: 70vw;
+}
+    .recommend-image {
+        height: 40rem;
+}
+    .recommend-image img {
+        width: 90%;
+}
+    .btn {
+        margin-bottom: 2.5rem;
+}
+    .recommend-name h2 {
+        padding-left: 3rem;
+        padding-top: 2rem;
+}
+    .recommend-description p {
+        padding-left: 3rem;
+        padding-right: 3rem;
+}
+    .recommend-author p {
+        padding-left: 3rem;
+        padding-right: 3rem;
+        padding-bottom: 1rem;
+}
+}
 
 
 
