@@ -35,6 +35,12 @@ https://stackoverflow.com/questions/11807286/how-to-make-div-background-color-tr
     margin-top: 0px;
 }
 
+.form-heading h2 {
+    font-size: 3rem;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
 .btn {
     margin-bottom: 5px;
 }
