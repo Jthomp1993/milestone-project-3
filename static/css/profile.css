@@ -9,5 +9,42 @@
     -o-background-size: cover;
 }
 
+.profile-welcome h2 {
+    margin-top: 0px;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 5rem;
+    padding-top: 15rem;
+}
+
+/* --- Media query for small screen sizes --- */
+@media only screen and (max-width: 600px) {
+    .profile-welcome h2 {
+        margin-top: 0px;
+        color: #ffffff;
+        font-weight: 700;
+        font-size: 3rem;
+        padding-top: 15rem;
+}
+}
+
+.profile-message {
+    background-color: #ffffff;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+}
+
+.profile-message p {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 1rem;
+}
+
+.recommendation-btn {
+    margin-top: 3rem;
+    padding-bottom: 2rem;
+}
+
+
 
 
