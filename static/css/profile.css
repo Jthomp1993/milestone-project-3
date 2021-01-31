@@ -17,21 +17,10 @@
     padding-top: 15rem;
 }
 
-/* --- Media query for small screen sizes --- */
-@media only screen and (max-width: 600px) {
-    .profile-welcome h2 {
-        margin-top: 0px;
-        color: #ffffff;
-        font-weight: 700;
-        font-size: 3rem;
-        padding-top: 15rem;
-}
-}
-
 .profile-message {
     background-color: #ffffff;
     margin-top: 2rem;
-    margin-bottom: 4rem;
+    margin-bottom: 5rem;
 }
 
 .profile-message p {
@@ -44,6 +33,25 @@
     margin-top: 3rem;
     padding-bottom: 2rem;
 }
+
+/* --- Media query for small screen sizes --- */
+@media only screen and (max-width: 600px) {
+    .profile-welcome h2 {
+        margin-top: 0px;
+        color: #ffffff;
+        font-weight: 700;
+        font-size: 3rem;
+        padding-top: 15rem;
+}
+}
+
+/* --- Media query for medium screen sizes --- */
+@media only screen and (min-width: 600px) and (max-width: 992px) {
+    .profile-message {
+        margin-bottom: 10rem;
+}
+}
+
 
 
 
