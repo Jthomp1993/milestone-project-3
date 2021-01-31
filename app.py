@@ -82,9 +82,20 @@ def login():
     return render_template("login.html")
 
 
-@app.route("/profile")
+@app.route("/profile", methods=["GET", "POST"])
 def profile():
-    return render_template("profile.html")
+
+    username = mongo.db.users.find_one({
+        "username": session["user"]})["username"]
+
+    recommendations = list(
+        mongo.db.recommendations.find().sort("recommend_date", -1))
+    return render_template("profile.html", recommendations=recommendations)
+
+    if session["user"]:
+        return render_template("profile.html", username=username)
+
+    return redirect(url_for("login.html"))
 
 
 if __name__ == "__main__":

@@ -20,7 +20,7 @@
 .profile-message {
     background-color: #ffffff;
     margin-top: 2rem;
-    margin-bottom: 5rem;
+    margin-bottom: 2rem;
 }
 
 .profile-message p {
@@ -34,6 +34,30 @@
     padding-bottom: 2rem;
 }
 
+.profile-heading {
+    background-color: #ffffff;
+    margin-bottom: 2rem;
+}
+
+.profile-heading h2 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+#recommendations-wrapper a {
+    text-decoration:none;
+    color: #2e2e2e;
+}
+
+#button a {
+    color: #ffffff;
+}
+
+.recommendation-buttons {
+    padding-bottom: 1rem;
+}
+
+
 /* --- Media query for small screen sizes --- */
 @media only screen and (max-width: 600px) {
     .profile-welcome h2 {
@@ -43,6 +67,9 @@
         font-size: 3rem;
         padding-top: 15rem;
 }
+    .profile-heading h2 {
+        font-size: 2rem;
+    }
 }
 
 /* --- Media query for medium screen sizes --- */
@@ -51,6 +78,7 @@
         margin-bottom: 10rem;
 }
 }
+
 
 
 

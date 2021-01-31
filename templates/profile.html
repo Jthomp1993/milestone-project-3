@@ -25,6 +25,43 @@
     </div>
 </div>
 
+<div class="container">
+    <div class="row">
+        <div class="col s12 m8 offset-m2 raleway text-color profile-heading shadow center-align">
+            <h2>Your Recommendations</h2>
+        </div>
+    </div>
+</div>
+
+<div class="container" id="recommendations-wrapper">
+        <div class="row">
+            {% for recommendation in recommendations %}
+            <a href="{{ url_for('view_recommendation', recommendation_id=recommendation._id) }}">
+            <div class="col s12 m4">
+                <div class="recommendations raleway text-color shadow">
+                    <div class="recommendations-image">
+                        <img src="{{ recommendation.recommend_image }}" alt="">
+                    </div>
+                    <div class="recommendations-category">
+                        <h3>{{ recommendation.recommend_category }}</h3>
+                    </div>
+                    <div class="recommendations-title">
+                        <h2>{{ recommendation.recommend_name }}</h2>
+                    </div>
+                    <div class="recommendations-info">
+                        <p>{{ recommendation.recommend_info }}</p>
+                    </div>
+                    <div class="recommendation-buttons center-align" id="button">
+                        <a class="waves-effect waves-light btn">Edit</a>
+                        <a class="waves-effect waves-light btn">Delete</a>
+                    </div>
+                </div>
+            </div>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+
 
 
 
