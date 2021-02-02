@@ -117,6 +117,31 @@ def add_recommendation():
             "add_recommendation.html", categories=categories)
 
 
+@app.route("/edit_recommendation/<recommendation_id>", methods=["GET", "POST"])
+def edit_recommendation(recommendation_id):
+    if request.method == "POST":
+        submit = {
+            "recommend_name": request.form.get("recommend_name"),
+            "recommend_category": request.form.get("recommend_category"),
+            "recommend_info": request.form.get("recommend_info"),
+            "recommend_description": request.form.get("recommend_description"),
+            "recommend_image": request.form.get("recommend_image"),
+            "created_by": session["user"],
+            "recommend_date": request.form.get("recommend_date")
+        }
+        mongo.db.recommendations.update(
+            {"_id": ObjectId(recommendation_id)}, submit)
+        flash("Recommendation Successfully Updated")
+        return redirect(url_for("profile", username=session["user"]))
+
+    recommendation = mongo.db.recommendations.find_one(
+            {"_id": ObjectId(recommendation_id)})
+    categories = mongo.db.categories.find().sort("category_name", 1)
+    return render_template(
+        "edit_recommendation.html", recommendation=recommendation,
+        categories=categories)
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")), debug=True)

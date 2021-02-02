@@ -22,13 +22,13 @@
     <div class="row add-form">
         <div class="input-field col s12">
             <i class="fas fa-folder-open prefix"></i>
-            <select id="category_name" name="category_name" class="validate" required>
+            <select id="recommend_category" name="recommend_category" class="validate" required>
                 <option value="" disabled selected class="text-color">Choose category</option>
                 {% for category in categories %}
                     <option value="{{ category.category_name }}">{{ category.category_name }}</option>
                 {% endfor %}
             </select>
-            <label for="category_name">Recommendation Category</label>
+            <label for="recommend_category">Recommendation Category</label>
         </div>
     </div>
         <!--Recommendation name-->

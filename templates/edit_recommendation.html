@@ -17,25 +17,29 @@
 
 <div class="container add-wrapper shadow">
 <div class="row card-panel">
-    <form class="col s12" method="POST" action="{{ url_for('edit_recommendation', recommendation_id=recommendations._id) }}">
+    <form class="col s12" method="POST" action="{{ url_for('edit_recommendation', recommendation_id=recommendation._id) }}">
     <!--Category select-->
     <div class="row add-form">
         <div class="input-field col s12">
             <i class="fas fa-folder-open prefix"></i>
-            <select id="category_name" name="category_name" class="validate" required>
+            <select id="recommend_category" name="recommend_category" class="validate" required>
                 <option value="" disabled selected class="text-color">Choose category</option>
                 {% for category in categories %}
-                    <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                    {% if category.category_name == recommendation.recommend_name %}
+                        <option value="{{ category.category_name }}" selected>{{ category.category_name }}</option>
+                    {% else %}
+                        <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                    {% endif %}
                 {% endfor %}
             </select>
-            <label for="category_name">Recommendation Category</label>
+            <label for="recommend_category">Recommendation Category</label>
         </div>
     </div>
         <!--Recommendation name-->
         <div class="row add-form">
             <div class="input-field col s12">
                 <i class="fas fa-tags prefix"></i>
-                <textarea id="recommend_name" name="recommend_name" class="materialize-textarea validate" minlength="3" maxlength="30" required></textarea>
+                <textarea id="recommend_name" name="recommend_name" class="materialize-textarea validate" minlength="3" maxlength="30" required>{{ recommendation.recommend_name }}</textarea>
                 <label for="recommend_name">Recommendation Name</label>
             </div>
         </div>
@@ -44,7 +48,7 @@
             <div class="input-field col s12">
                 <i class="fas fa-bars prefix"></i>
                 <textarea id="recommend_info" name="recommend_info" class="materialize-textarea validate" 
-                    minlength="20" maxlength="80" required></textarea>
+                    minlength="20" maxlength="80" required>{{ recommendation.recommend_info }}</textarea>
                 <label for="recommend_info">Brief Description</label>
             </div>
         </div>
@@ -53,24 +57,24 @@
             <div class="input-field col s12">
                 <i class="fas fa-bars prefix"></i>
                 <textarea id="recommend_description" name="recommend_description" class="materialize-textarea validate" 
-                    minlength="30" maxlength="400" required></textarea>
-                <label for="recommend_description">Please give us the full details</label>
+                    minlength="30" maxlength="400" required>{{ recommendation.recommend_description }}</textarea>
+                <label for="recommend_description">Please give us full details</label>
             </div>
         </div>
         <!--Image link-->
         <div class="row add-form">
             <div class="input-field col s12">
                 <i class="fas fa-camera prefix"></i>
-                <textarea id="recommend_image" name="recommend_image" class="materialize-textarea validate" required></textarea>
-                <label for="recommend_image">Please provide an image link</label>
+                <textarea id="recommend_image" name="recommend_image" class="materialize-textarea validate" required>{{ recommendation.recommend_image }}</textarea>
+                <label for="recommend_image">Please provide a photo link</label>
             </div>
         </div>
         <!--Due date selector-->
         <div class="row add-form">
             <div class="input-field col s12">
                 <i class="fas fa-calendar-check prefix"></i>
-                <input id="recommend_date" name="recommend_date" type="text" class="datepicker" required>
-                <label for="recommend_date">Today's Date</label>
+                <input id="recommend_date" name="recommend_date" value="{{ recommendation.recommend_date }}" type="text" class="datepicker" required>
+                <label for="recommend_date">Recommendation Date</label>
             </div>
         </div>
         <!--Submit button-->

@@ -39,6 +39,20 @@
         </ul>
     </header>
 
+    <!--The following code to get the falsh messages is taken from the walkthrough project-->
+    <section>
+        <!--Flash messages-->
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="row flashes">
+                        <h4 class="center-align">{{ message }}</h4>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    </section>
+
     {% block content %}
     {% endblock %}
 
