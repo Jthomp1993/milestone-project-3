@@ -84,18 +84,37 @@ def login():
 
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
-
-    username = mongo.db.users.find_one({
-        "username": session["user"]})["username"]
-
-    recommendations = list(
-        mongo.db.recommendations.find().sort("recommend_date", -1))
-
     if session["user"]:
+        username = mongo.db.users.find_one({
+            "username": session["user"]})["username"]
+
+        recommendations = list(
+            mongo.db.recommendations.find().sort("recommend_date", -1))
         return render_template(
             "profile.html", recommendations=recommendations, username=username)
 
     return redirect(url_for("login.html"))
+
+
+@app.route("/add_recommendation", methods=["GET", "POST"])
+def add_recommendation():
+    if request.method == "POST":
+        recommendation = {
+            "recommend_name": request.form.get("recommend_name"),
+            "recommend_category": request.form.get("recommend_category"),
+            "recommend_info": request.form.get("recommend_info"),
+            "recommend_description": request.form.get("recommend_description"),
+            "recommend_image": request.form.get("recommend_image"),
+            "created_by": request.form.get("created_by"),
+            "recommend_date": request.form.get("recommend_date")
+        }
+        mongo.db.insert_one(recommendation)
+        flash("Recommendation Successfully Added")
+        return redirect(url_for("profile", username=session["user"]))
+
+    categories = mongo.db.categories.find().sort("category_name", 1)
+    return render_template(
+            "add_recommendation.html", categories=categories)
 
 
 if __name__ == "__main__":

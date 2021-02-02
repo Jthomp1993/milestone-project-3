@@ -1,0 +1,10 @@
+.add-hero-image {
+    min-height: 70vh;
+    background-image: url(../images/recommendation.jpg);
+    background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+    -o-background-size: cover;
+}
