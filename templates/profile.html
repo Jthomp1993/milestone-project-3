@@ -36,6 +36,7 @@
 <div class="container" id="recommendations-wrapper">
         <div class="row">
             {% for recommendation in recommendations %}
+            {% if session.user|lower == recommendation.created_by|lower %} 
             <a href="{{ url_for('view_recommendation', recommendation_id=recommendation._id) }}">
             <div class="col s12 m4">
                 <div class="recommendations raleway text-color shadow">
@@ -58,6 +59,7 @@
                 </div>
             </div>
             </a>
+            {% endif %}
             {% endfor %}
         </div>
     </div>
