@@ -8,3 +8,35 @@
 	-moz-background-size: cover;
     -o-background-size: cover;
 }
+
+.add-heading {
+    background-color: #ffffff;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.add-heading h2 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.add-wrapper {
+    background-color: #ffffff;
+}
+
+.add-form {
+    padding-left: 4rem;
+    padding-right: 4rem;
+} 
+
+/* --- Media query for small screen sizes --- */
+@media only screen and (max-width: 600px) {
+    .add-form {
+        padding-left: 0px;
+        padding-right: 0px;
+} 
+    .add-heading h2 {
+        font-size: 2rem;
+        font-weight: 700;
+}
+}

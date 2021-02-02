@@ -105,10 +105,10 @@ def add_recommendation():
             "recommend_info": request.form.get("recommend_info"),
             "recommend_description": request.form.get("recommend_description"),
             "recommend_image": request.form.get("recommend_image"),
-            "created_by": request.form.get("created_by"),
+            "created_by": session["user"],
             "recommend_date": request.form.get("recommend_date")
         }
-        mongo.db.insert_one(recommendation)
+        mongo.db.recommendations.insert_one(recommendation)
         flash("Recommendation Successfully Added")
         return redirect(url_for("profile", username=session["user"]))
 
