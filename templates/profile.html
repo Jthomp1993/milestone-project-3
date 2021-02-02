@@ -54,9 +54,10 @@
                     </div>
                     <div class="recommendation-buttons center-align" id="button">
                         <a href="{{ url_for('edit_recommendation', recommendation_id=recommendation._id) }}" class="waves-effect waves-light btn">Edit</a>
-                        <a href="#modal1" class="waves-effect waves-light btn modal-trigger">Delete</a>
+                        <a href="#modal{{loop.index}}" class="waves-effect waves-light btn modal-trigger">Delete</a>
                     </div>
-                    <div id="modal1" class="modal">
+                    <!--I got the idea to use {{loop.index}} from https://github.com/adamdelancey/ms3-tips/blob/master/templates/profile.html-->
+                    <div id="modal{{loop.index}}" class="modal">
                         <div class="modal-content">
                             <h4>Are you sure you would like to delete {{ recommendation.recommend_name }}</h4>
                         </div>
