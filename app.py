@@ -90,10 +90,10 @@ def profile(username):
 
     recommendations = list(
         mongo.db.recommendations.find().sort("recommend_date", -1))
-    return render_template("profile.html", recommendations=recommendations)
 
     if session["user"]:
-        return render_template("profile.html", username=username)
+        return render_template(
+            "profile.html", recommendations=recommendations, username=username)
 
     return redirect(url_for("login.html"))
 

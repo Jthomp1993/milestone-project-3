@@ -62,6 +62,20 @@ nav .brand-logo {
 	color: #D1D1D1;
 }
 
+html, body {
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+.page-container {
+  flex: 1 0 auto;
+}
+.page-footer {
+  flex-shrink: 0;
+}
+
 /* -------------------------------------------------- index.html */
 
 .hero-image {
@@ -347,21 +361,6 @@ nav .brand-logo {
     .btn {
     margin-bottom: 2.5rem;
 }
-/* I used the following article to write the code below to keep the footer at the bottom of the page 
-   https://www.freecodecamp.org/news/how-to-keep-your-footer-where-it-belongs-59c6aa05c59c/ */
-
-    .page-container {
-        position: relative;
-        min-height: 100vh;
-}
-
-    .page-footer {
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        margin-top: 10rem;
-}
-
 }
 
 /*--- Media query for Ipad Pro ---- */
@@ -377,21 +376,6 @@ nav .brand-logo {
 }
     .btn {
         margin-bottom: 2.5rem;
-}
-
-/* I used the following article to write the code below to keep the footer at the bottom of the page 
-   https://www.freecodecamp.org/news/how-to-keep-your-footer-where-it-belongs-59c6aa05c59c/ */
-
-    .page-container {
-        position: relative;
-        min-height: 100vh;
-}
-
-    .page-footer {
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        margin-top: 10rem;
 }   
 }
 
