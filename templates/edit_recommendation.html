@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/add_recommendation.css') }}" type="text/css">
+{% endblock %}
+
+
+{% block content %}
+<div class="row add-hero-image hide-on-small-only"></div>
+
+<div class="container">
+    <div class="row">
+        <div class="col s12 m8 offset-m2 raleway text-color add-heading shadow center-align">
+            <h2>Edit Recommendation</h2>
+        </div>
+    </div>
+</div>
+
+<div class="container add-wrapper shadow">
+<div class="row card-panel">
+    <form class="col s12" method="POST" action="{{ url_for('edit_recommendation', recommendation_id=recommendations._id) }}">
+    <!--Category select-->
+    <div class="row add-form">
+        <div class="input-field col s12">
+            <i class="fas fa-folder-open prefix"></i>
+            <select id="category_name" name="category_name" class="validate" required>
+                <option value="" disabled selected class="text-color">Choose category</option>
+                {% for category in categories %}
+                    <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                {% endfor %}
+            </select>
+            <label for="category_name">Recommendation Category</label>
+        </div>
+    </div>
+        <!--Recommendation name-->
+        <div class="row add-form">
+            <div class="input-field col s12">
+                <i class="fas fa-tags prefix"></i>
+                <textarea id="recommend_name" name="recommend_name" class="materialize-textarea validate" minlength="3" maxlength="30" required></textarea>
+                <label for="recommend_name">Recommendation Name</label>
+            </div>
+        </div>
+        <!--Short description of recommendation-->
+        <div class="row add-form">
+            <div class="input-field col s12">
+                <i class="fas fa-bars prefix"></i>
+                <textarea id="recommend_info" name="recommend_info" class="materialize-textarea validate" 
+                    minlength="20" maxlength="80" required></textarea>
+                <label for="recommend_info">Brief Description</label>
+            </div>
+        </div>
+        <!--Description of recommendation-->
+        <div class="row add-form">
+            <div class="input-field col s12">
+                <i class="fas fa-bars prefix"></i>
+                <textarea id="recommend_description" name="recommend_description" class="materialize-textarea validate" 
+                    minlength="30" maxlength="400" required></textarea>
+                <label for="recommend_description">Please give us the full details</label>
+            </div>
+        </div>
+        <!--Image link-->
+        <div class="row add-form">
+            <div class="input-field col s12">
+                <i class="fas fa-camera prefix"></i>
+                <textarea id="recommend_image" name="recommend_image" class="materialize-textarea validate" required></textarea>
+                <label for="recommend_image">Please provide an image link</label>
+            </div>
+        </div>
+        <!--Due date selector-->
+        <div class="row add-form">
+            <div class="input-field col s12">
+                <i class="fas fa-calendar-check prefix"></i>
+                <input id="recommend_date" name="recommend_date" type="text" class="datepicker" required>
+                <label for="recommend_date">Today's Date</label>
+            </div>
+        </div>
+        <!--Submit button-->
+        <div class="row">
+            <div class="col s12 center-align">
+                <button class="btn waves-effect waves-light" type="submit">Edit
+                    <i class="fas fa-sign-in-alt"></i>
+                </button>
+            </div>
+        </div>
+    </form>
+  </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
