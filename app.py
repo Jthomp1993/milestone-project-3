@@ -142,6 +142,13 @@ def edit_recommendation(recommendation_id):
         categories=categories)
 
 
+@app.route("/delete_recommendation/<recommendation_id>")
+def delete_recommendation(recommendation_id):
+    mongo.db.recommendations.remove({"_id": ObjectId(recommendation_id)})
+    flash("Task Successfully Deleted")
+    return redirect(url_for("profile", username=session["user"]))
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")), debug=True)
