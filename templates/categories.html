@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block styles %}
-<link rel="stylesheet" href="{{ url_for('static', filename='css/add_recommendation.css') }}" type="text/css">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/manage_categories.css') }}" type="text/css">
 {% endblock %}
 
 {% block content %}
@@ -13,6 +13,40 @@
         </div>
     </div>
 </div>
+
+<!-- For loop to pull data from MongoDB and create category cards -->
+    <div class="container" id="categories-wrapper">
+    <div class="row">
+        {% for category in categories %}
+        <div class="col m6 xl3 s6">
+            <div class="card shadow">
+                <div class="card-image">
+                    <img src="{{ category.category_image }}" alt="{{ category.category_name }}">
+                </div>
+                <div class="card-title text-color raleway bold">
+                    <h2>{{ category.category_name }}</h2>
+                </div>
+                <div class="card-info raleway text-color hide-on-small-only">
+                    <p>{{ category.category_info }}</p>
+                </div>
+                <div class="category-button center-align" id="delete-btn">
+                    <a href="#modal{{loop.index}}" class="waves-effect waves-light btn modal-trigger">Delete</a>
+                </div>
+                <!--I got the idea to use {{loop.index}} from https://github.com/adamdelancey/ms3-tips/blob/master/templates/profile.html-->
+                    <div id="modal{{loop.index}}" class="modal">
+                        <div class="modal-content">
+                            <h4>Are you sure you would like to delete {{ category.category_name }}</h4>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="{{ url_for('delete_category', category_id=category._id)}}" class="modal-close waves-effect waves-green btn-flat">Yes</a>
+                            <a href="#categories-wrapper" class="modal-close waves-effect waves-green btn-flat">Cancel</a>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    </div>
 
 
 

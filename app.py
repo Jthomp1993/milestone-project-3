@@ -158,6 +158,13 @@ def delete_recommendation(recommendation_id):
     return redirect(url_for("profile", username=session["user"]))
 
 
+@app.route("/delete_category/<category_id>")
+def delete_category(category_id):
+    mongo.db.categories.remove({"_id": ObjectId(category_id)})
+    flash("Category Successfully Deleted")
+    return redirect(url_for("manage_categories"))
+
+
 @app.route("/manage_categories")
 def manage_categories():
     categories = list(mongo.db.categories.find().sort("category_name", 1))
