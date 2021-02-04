@@ -91,6 +91,13 @@ def login():
     return render_template("login.html")
 
 
+@app.route("/logout")
+def logout():
+    flash("You have been logged out!")
+    session.pop("user")
+    return redirect(url_for("login"))
+
+
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
     if session["user"]:
