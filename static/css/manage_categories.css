@@ -37,6 +37,10 @@
     padding-bottom: 1rem;
 }
 
+.add-category-btn {
+    background-color: #2e2e2e;
+}
+
 /* --- Media query for small screen sizes --- */
 @media only screen and (max-width: 600px) {
     .add-form {

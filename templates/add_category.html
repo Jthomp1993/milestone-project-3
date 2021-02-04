@@ -14,6 +14,46 @@
     </div>
 </div>
 
+<div class="container add-wrapper shadow">
+<div class="row card-panel">
+    <form class="col s12" method="POST" action="#">
+        <!--Category name-->
+        <div class="row add-form">
+            <div class="input-field col s12">
+                <i class="fas fa-tags prefix"></i>
+                <textarea id="category_name" name="category_name" class="materialize-textarea validate" minlength="3" maxlength="15" required></textarea>
+                <label for="category_name">Category Name</label>
+            </div>
+        </div>
+        <!--Short description of category-->
+        <div class="row add-form">
+            <div class="input-field col s12">
+                <i class="fas fa-bars prefix"></i>
+                <textarea id="category_info" name="category_info" class="materialize-textarea validate" 
+                    minlength="20" maxlength="80" required></textarea>
+                <label for="category_info">Category Description</label>
+            </div>
+        </div>
+        <!--Image link-->
+        <div class="row add-form">
+            <div class="input-field col s12">
+                <i class="fas fa-camera prefix"></i>
+                <textarea id="category_image" name="category_image" class="materialize-textarea validate" required></textarea>
+                <label for="category_image">Please provide an image link</label>
+            </div>
+        </div>
+        <!--Submit button-->
+        <div class="row">
+            <div class="col s12 center-align">
+                <button class="btn waves-effect waves-light" type="submit">Submit
+                    <i class="fas fa-sign-in-alt"></i>
+                </button>
+            </div>
+        </div>
+    </form>
+  </div>
+  </div>
+
 
 
 {% endblock %}

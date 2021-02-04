@@ -35,7 +35,8 @@ def filter_categories(recommend_category):
     recommendations = list(mongo.db.recommendations.find(
         {"recommend_category": recommend_category}).sort(
             "recommend_date", -1))
-    return render_template("index.html", categories=categories, recommendations=recommendations)
+    return render_template("index.html",
+    categories=categories, recommendations=recommendations)
 
 
 @app.route("/view_recommendation/<recommendation_id>")
