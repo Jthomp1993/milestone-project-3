@@ -23,6 +23,7 @@
                 <li><a href="{{ url_for('get_categories') }}">Home</a></li>
                 <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
                 <li><a href="{{ url_for('add_recommendation') }}">Add Recommendation</a></li>
+                <li><a href="{{ url_for('manage_categories') }}">Manage Categories</a></li>
                 <li><a href="{{ url_for('login') }}">Login</a></li>
                 <li><a href="{{ url_for('register') }}">Register</a></li>
             </ul>
@@ -34,6 +35,7 @@
             <li><a href="{{ url_for('get_categories') }}">Home</a></li>
             <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
             <li><a href="{{ url_for('add_recommendation') }}">Add Recommendation</a></li>
+            <li><a href="{{ url_for('manage_categories') }}">Manage Categories</a></li>
             <li><a href="{{ url_for('login') }}">Login</a></li>
             <li><a href="{{ url_for('register') }}">Register</a></li>
         </ul>
