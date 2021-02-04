@@ -25,6 +25,7 @@
     <div class="container" id="categories-wrapper">
     <div class="row">
         {% for category in categories %}
+        <a href="{{ url_for('filter_categories', recommend_category=category.category_name) }}#recommendations-wrapper">
         <div class="col m6 xl3 s6">
             <div class="card shadow">
                 <div class="card-image">
@@ -38,6 +39,7 @@
                 </div>
             </div>
         </div>
+        </a>
         {% endfor %}
     </div>
     </div>
