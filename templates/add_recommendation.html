@@ -79,6 +79,7 @@
                 <button class="btn waves-effect waves-light" type="submit">Submit
                     <i class="fas fa-sign-in-alt"></i>
                 </button>
+                <a href="{{ url_for('profile', username=session['user']) }}" class="waves-effect waves-light btn">Cancel</a>
             </div>
         </div>
     </form>
