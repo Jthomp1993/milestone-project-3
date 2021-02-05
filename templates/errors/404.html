@@ -1,7 +1,16 @@
-{% block content %}
-<h1>404 Error!</h1>
-<p>Oops something went wrong!</p>
-<p><a href="{{ url_for('get_categories') }}">Return to home page</a></p>
+{% extends "base.html" %}
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/errors.css') }}" type="text/css">
+{% endblock %}
 
+{% block content %}
+<div class="container center-align">
+<h1 class="raleway">404 Error!</h1>
+<p class="raleway">Oops something went wrong!</p>
+<p class="raleway"><a href="{{ url_for('get_categories') }}">Return to home page</a></p>
+</div>
 
 {% endblock %}
+
+<!-- Sources of guidance used to create this page -->
+<!-- https://www.youtube.com/watch?v=OczLouzgJSc -->
