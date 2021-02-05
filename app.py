@@ -35,8 +35,16 @@ def filter_categories(recommend_category):
     recommendations = list(mongo.db.recommendations.find(
         {"recommend_category": recommend_category}).sort(
             "recommend_date", -1))
-    return render_template("index.html",
-    categories=categories, recommendations=recommendations)
+    return render_template(
+        "index.html", categories=categories, recommendations=recommendations)
+
+
+@app.route("/search", methods=["GET", "POST"])
+def search():
+    query = request.form.get("query")
+    recommendations = list(
+        mongo.db.recommendations.find({"$text": {"$search": query}}))
+    return render_template("index.html", recommendations=recommendations)
 
 
 @app.route("/view_recommendation/<recommendation_id>")

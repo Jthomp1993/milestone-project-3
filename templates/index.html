@@ -43,6 +43,27 @@
         {% endfor %}
     </div>
     </div>
+
+    <div class="container search-bar-wrapper shadow" id="search-bar">
+        <form action="{{url_for('search') }}#recommendations-wrapper" method="POST" class="col s12">
+            <div class="row search-form">
+                <div class="input-field col s12">
+                    <i class="fas fa-search prefix"></i>
+                    <textarea id="query" name="query" class="materialize-textarea validate" minlength="3" maxlength="30" required></textarea>
+                <label for="query">Search Recommendations</label>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col s12 center-align">
+                    <button class="btn waves-effect waves-light" type="submit">Search
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <a href="{{ url_for('get_categories') }}#search-bar" class="waves-effect waves-light btn">Reset</a>
+                </div>
+            </div>
+        </form>
+    </div>
     
     <div class="container" id="recommendations-wrapper">
         <div class="row">

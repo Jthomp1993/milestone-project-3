@@ -31,7 +31,7 @@
 /* ------------------------------------ base.html */
 
 body {
-    background-color: #e7e7e7;
+    background-color: #e2e2e2;
 }
 
 nav .brand-logo {
@@ -209,6 +209,48 @@ body {
     
 }
 }
+
+/*--------------------------------------- Search bar / index.html */
+
+.search-form {
+    padding-left: 4rem;
+    padding-right: 4rem;
+} 
+.search-bar-wrapper {
+    background-color: #ffffff;
+    width: 50vw;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    padding-bottom: 2rem;
+}
+
+/* --- Media query for medium screen sizes --- */
+@media only screen and (max-width: 992px) {
+    .search-bar-wrapper {
+    width: 50vw;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    padding-bottom: 2rem;
+}
+}
+
+/* --- Media query for small screen sizes --- */
+@media only screen and (max-width: 600px) {
+    .search-bar-wrapper {
+        width: 90vw;
+        margin-top: 2rem;
+        margin-bottom: 4rem;
+        padding-bottom: 2rem;
+}
+    .search-form {
+        padding-left: 1rem;
+        padding-right: 1rem;
+}
+}
+
+
+
+
 
 /*--------------------------------------- Recommendations section / index.html */
 
