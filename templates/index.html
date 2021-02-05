@@ -44,6 +44,12 @@
     </div>
     </div>
 
+    <div class="contianer">
+        <div class="row center-align">
+            <a href="{{ url_for('get_categories') }}#categories-wrapper" class="waves-effect waves-light btn">Reset Categories</a>
+        </div>
+    </div>
+
     <div class="container search-bar-wrapper shadow" id="search-bar">
         <form action="{{url_for('search') }}#recommendations-wrapper" method="POST" class="col s12">
             <div class="row search-form">

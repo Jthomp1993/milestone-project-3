@@ -219,7 +219,6 @@ body {
 .search-bar-wrapper {
     background-color: #ffffff;
     width: 50vw;
-    margin-top: 2rem;
     margin-bottom: 4rem;
     padding-bottom: 2rem;
 }
@@ -228,7 +227,6 @@ body {
 @media only screen and (max-width: 992px) {
     .search-bar-wrapper {
     width: 50vw;
-    margin-top: 2rem;
     margin-bottom: 4rem;
     padding-bottom: 2rem;
 }
@@ -295,7 +293,7 @@ body {
     font-size: 12px;
     font-weight: 300;
     padding-left: 10px;
-    height: 2rem;
+    padding-bottom: 1rem;
 }
 
 /* --- Media query for medium screen sizes --- */
