@@ -33,6 +33,20 @@
     </div>
 </div>
 
+<!--The following code to get the falsh messages is taken from the walkthrough project-->
+    <section>
+        <!--Flash messages-->
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="row flashes">
+                        <h4 class="center-align raleway bold">{{ message }}</h4>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    </section>
+
 <div class="container" id="recommendations-wrapper">
         <div class="row">
             {% for recommendation in recommendations %}
@@ -62,7 +76,7 @@
                             <h4>Are you sure you would like to delete {{ recommendation.recommend_name }}</h4>
                         </div>
                         <div class="modal-footer">
-                            <a href="{{ url_for('delete_recommendation', recommendation_id=recommendation._id) }}" class="modal-close waves-effect waves-green btn-flat">Yes</a>
+                            <a href="{{ url_for('delete_recommendation', recommendation_id=recommendation._id) }}#recommendations-wrapper" class="modal-close waves-effect waves-green btn-flat">Yes</a>
                             <a href="{{ url_for('profile', username=session['user']) }}" class="modal-close waves-effect waves-green btn-flat">Cancel</a>
                         </div>
                     </div>
