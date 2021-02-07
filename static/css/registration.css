@@ -12,17 +12,13 @@
 }
 
 .register-form {
-    margin-top: 5rem;
+    margin-top: 2rem;
 }
 
 /* I used the following article to make the form div transparent 
 https://stackoverflow.com/questions/11807286/how-to-make-div-background-color-transparent-in-css */
 .card-panel {
     background-color: rgba(255, 255, 255, 0.9);
-}
-
-#register-wrapper {
-    width: 50vw;
 }
 
 .form-text a {
@@ -44,14 +40,24 @@ https://stackoverflow.com/questions/11807286/how-to-make-div-background-color-tr
     margin-bottom: 5px;
 }
 
+.page-container {
+    position: relative;
+    min-height: 100vh;
+}
+
+.page-footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        margin-top: 10rem;
+}
+
 /* --- Media query for small screen sizes --- */
 @media only screen and (max-width: 600px) {
     .page-footer {
-        margin-top: 0px;
+        margin-top: 10rem;
 }
-    .register-image {
-        height: 85vh;
-    }
+    
     .page-container {
         position: relative;
         min-height: 100vh;
@@ -65,29 +71,3 @@ https://stackoverflow.com/questions/11807286/how-to-make-div-background-color-tr
 }
 }
 
-/* --- Media query for medium screen sizes --- */
-@media only screen and (min-width: 600px) and (max-width: 992px){
-    .page-footer {
-        display: none;
-}
-    .register-image {
-        height: 90vh;
-    }
-}
-
-/*--- Media query for Ipad Pro ---- */
-@media only screen and (min-width: 993px) and (max-width: 1200px){
-    .register-image {
-        height: 90vh;
-    }
-    .page-footer {
-        display: none;
-    }
-}
-
-/* --- Media query for large screen sizes ---*/ 
-@media only screen and (min-width: 1200px) and (max-width: 1800px) {
-    .page-footer {
-        margin-top: 0px;
-    }
-}
