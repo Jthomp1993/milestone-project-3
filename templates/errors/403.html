@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/errors.css') }}" type="text/css">
+{% endblock %}
+
+{% block content %}
+<div class="container center-align">
+<h1 class="raleway">403 Error!</h1>
+<p class="raleway">This page is forbidden!</p>
+<p class="raleway"><a href="{{ url_for('get_categories') }}">Return to home page</a></p>
+</div>
+
+{% endblock %}

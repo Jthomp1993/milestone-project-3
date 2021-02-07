@@ -202,8 +202,13 @@ def delete_category(category_id):
 
 @app.route("/manage_categories")
 def manage_categories():
-    categories = list(mongo.db.categories.find().sort("category_name", 1))
-    return render_template("categories.html", categories=categories)
+    if session['user'] == "admin".lower():
+
+        categories = list(mongo.db.categories.find().sort("category_name", 1))
+        return render_template("categories.html", categories=categories)
+
+    else:
+        return render_template("errors/403.html")
 
 
 @app.route("/add_category", methods=["GET", "POST"])
@@ -226,6 +231,11 @@ def add_category():
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template("errors/404.html"), 404
+
+
+@app.errorhandler(403)
+def page_forbidden(e):
+    return render_template("errors/403.html"), 404
 
 
 if __name__ == "__main__":
