@@ -228,7 +228,7 @@ def add_category():
             "add_category.html", categories=categories)
 
 
-@app.route("/contact", methods=["GET", "POST"])
+@app.route("/contact")
 def contact():
     return render_template("contact.html")
 

@@ -15,31 +15,31 @@
 </div>
 
 <div class="container add-wrapper shadow">
-<div class="row card-panel">
-    <form class="col s12" method="POST" action="{{ url_for('add_category') }}#categories-wrapper">
+<div class="row card-panel" id="contact-form">
+    <form onsubmit="return sendMail(this);" class="col s12">
         <!--Category name-->
         <div class="row add-form">
             <div class="input-field col s12">
                 <i class="fas fa-file-signature prefix"></i>
-                <textarea id="category_name" name="category_name" class="materialize-textarea validate" minlength="3" maxlength="15" required></textarea>
-                <label for="category_name">Full Name</label>
+                <textarea id="from_name" name="name" class="materialize-textarea validate" minlength="3" maxlength="30" required></textarea>
+                <label for="from_name">Full Name</label>
             </div>
         </div>
         <!--Short description of category-->
         <div class="row add-form">
             <div class="input-field col s12">
                 <i class="fas fa-envelope-open-text prefix"></i>
-                <textarea id="category_info" name="category_info" class="materialize-textarea validate" 
+                <textarea id="emailaddress" name="emailaddress" class="materialize-textarea validate" 
                     minlength="20" maxlength="80" required></textarea>
-                <label for="category_info">Email Address</label>
+                <label for="emailaddress">Email Address</label>
             </div>
         </div>
         <!--Image link-->
         <div class="row add-form">
             <div class="input-field col s12">
                 <i class="fas fa-comment-dots prefix"></i>
-                <textarea id="category_image" name="category_image" class="materialize-textarea validate" required></textarea>
-                <label for="category_image">Message</label>
+                <textarea id="message" name="message" class="materialize-textarea validate" required></textarea>
+                <label for="message">Message</label>
             </div>
         </div>
         <!--Submit button-->
@@ -53,5 +53,8 @@
     </form>
 </div>
 </div>
+{% endblock %}
 
+{% block scripts %}
+<script src="static/js/contact.js"></script>
 {% endblock %}
