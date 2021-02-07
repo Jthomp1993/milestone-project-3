@@ -143,16 +143,16 @@ body {
 .card-title h2 {
     font-size: 1.5rem;
     font-weight: 700;
-    padding-left: 5px;
-    margin-top: 5px;
+    padding-left: 10px;
+    margin-top: 10px;
     margin-bottom: 1rem;
 }
 
 .card-info p {
     font-size: 14px;
-    padding-left: 5px;
-    padding-right: 5px;
-    margin-top: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 10px;
     
 }
 
@@ -176,9 +176,9 @@ body {
 }
     .card-info p {
     font-size: 14px;
-    padding-left: 5px;
-    padding-right: 5px;
-    margin-top: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 10px;
     
 }
 }
@@ -294,13 +294,14 @@ body {
     font-size: 12px;
     font-weight: 300;
     padding-left: 10px;
+    padding-right: 10px;
     padding-bottom: 1rem;
 }
 
 /* --- Media query for medium screen sizes --- */
 @media only screen and (max-width: 992px) {
     .recommendations-image {
-    height: 9rem;
+    height: 14rem;
     overflow: hidden;
 }
     .recommendations-category h3 {
@@ -327,7 +328,7 @@ body {
 /*--- Media query for Ipad Pro ---- */
 @media only screen and (min-width: 993px) and (max-width: 1200px) {
     .recommendations-image {
-    height: 10rem;
+    height: 15rem;
 }
     .recommendations-title {
     height: 2.5rem;

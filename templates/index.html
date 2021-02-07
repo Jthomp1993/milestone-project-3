@@ -69,7 +69,7 @@
         <div class="row">
             {% for recommendation in recommendations %}
             <a href="{{ url_for('view_recommendation', recommendation_id=recommendation._id) }}">
-            <div class="col s12 m4">
+            <div class="col s12 m6 xl4">
                 <div class="recommendations raleway text-color shadow">
                     <div class="recommendations-image">
                         <img src="{{ recommendation.recommend_image }}" alt="">
