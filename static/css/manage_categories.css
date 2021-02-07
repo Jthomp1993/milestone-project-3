@@ -51,4 +51,10 @@
         font-size: 2rem;
         font-weight: 700;
 }
+    .card-image {
+        height: 15rem;
+    }
+    .card-title h2 {
+        font-size: 1.5rem;
+    }
 }

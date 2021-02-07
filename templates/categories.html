@@ -14,11 +14,25 @@
     </div>
 </div>
 
+<!--The following code to get the falsh messages is taken from the walkthrough project-->
+    <section>
+        <!--Flash messages-->
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="row register-flashes">
+                        <h4 class="center-align raleway bold text-color">{{ message }}</h4>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    </section>
+
 <!-- For loop to pull data from MongoDB and create category cards -->
     <div class="container" id="categories-wrapper">
     <div class="row">
         {% for category in categories %}
-        <div class="col m6 xl3 s6">
+        <div class="col m6 xl3 s12">
             <div class="card shadow">
                 <div class="card-image">
                     <img src="{{ category.category_image }}" alt="{{ category.category_name }}">
@@ -39,7 +53,7 @@
                             <h4>Are you sure you would like to delete {{ category.category_name }}</h4>
                         </div>
                         <div class="modal-footer">
-                            <a href="{{ url_for('delete_category', category_id=category._id)}}" class="modal-close waves-effect waves-green btn-flat">Yes</a>
+                            <a href="{{ url_for('delete_category', category_id=category._id)}}#categories-wrapper" class="modal-close waves-effect waves-green btn-flat">Yes</a>
                             <a href="#categories-wrapper" class="modal-close waves-effect waves-green btn-flat">Cancel</a>
                         </div>
                     </div>
@@ -56,8 +70,5 @@
             </div>
         </div>
     </div>
-
-
-
 
 {% endblock %}
