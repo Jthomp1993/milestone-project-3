@@ -228,6 +228,11 @@ def add_category():
             "add_category.html", categories=categories)
 
 
+@app.route("/contact", methods=["GET", "POST"])
+def contact():
+    return render_template("contact.html")
+
+
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template("errors/404.html"), 404
