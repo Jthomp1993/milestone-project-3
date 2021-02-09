@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block styles %}
-<link rel="stylesheet" href="{{ url_for('static', filename='css/add_recommendation.css') }}" type="text/css">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/contact.css') }}" type="text/css">
 {% endblock %}
 
 {% block content %}
@@ -63,8 +63,45 @@
     </form>
 </div>
 </div>
+
+<div class="container">
+    <div class="row">
+        <div class="col s12 m8 offset-m2 raleway text-color add-heading shadow center-align">
+            <h2>Where to find us</h2>
+        </div>
+    </div>
+</div>
+
+<div class="container maps-wrapper">
+    <div class="row">
+        <div class="col s12 raleway text-color google-maps">
+            <div class="contact-section">
+                <div class="maps-api">
+
+                </div>
+                <div class="contact-address">
+                    <h2 class="bold">Address</h2>
+                    <p>16 Charlotte <br> Road <br> Shoreditch <br> London <br> EC2A 3PG</p>
+                </div>
+                <div class="contact-telephone">
+                    <h2 class="bold">Telephone</h2>
+                    <p>01284 403847</p>
+                </div>
+                <div class="contact-email">
+                    <h2 class="bold">Email</h2>
+                    <p>explorelondon@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
 
 {% block scripts %}
 <script src="static/js/contact.js"></script>
 {% endblock %}
+
+
+<!-- ** Sources of guidance used to create this code ** -->
+
+<!-- ** Johann from tutor support helped me to fix the bug that the materialize modal was causing ** -->

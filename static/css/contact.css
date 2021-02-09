@@ -1,0 +1,72 @@
+.add-hero-image {
+    min-height: 70vh;
+    background-image: url(../images/recommendation.jpg);
+    background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+.add-heading {
+    background-color: #ffffff;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.add-heading h2 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.add-wrapper {
+    background-color: #ffffff;
+}
+
+.add-form {
+    padding-left: 4rem;
+    padding-right: 4rem;
+} 
+
+.contact-form-container {
+    margin-bottom: 2rem;
+}
+
+.maps-wrapper {
+    background-color: #ffffff;
+    
+}
+
+.contact-section {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 2rem;
+    padding-bottom: 1.5rem;
+}
+
+.maps-api {
+    height: 40rem;
+    background-color: bisque;
+}
+
+.google-maps h2 {
+    font-size: 1.5rem;
+}
+
+.google-maps p {
+    font-size: 14px;
+}
+
+/* --- Media query for small screen sizes --- */
+@media only screen and (max-width: 600px) {
+    .add-form {
+        padding-left: 0px;
+        padding-right: 0px;
+} 
+    .add-heading h2 {
+        font-size: 2rem;
+        font-weight: 700;
+}
+}
+
