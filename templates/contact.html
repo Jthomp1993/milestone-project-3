@@ -14,9 +14,9 @@
     </div>
 </div>
 
-<div class="container add-wrapper shadow">
+<div class="container add-wrapper shadow contact-form-container">
 <div class="row card-panel">
-    <form onsubmit="return sendMail(this);" class="col s12" id="contact-form">
+    <form class="col s12" id="contact-form">
         <!--Category name-->
         <div class="row add-form">
             <div class="input-field col s12">
@@ -30,7 +30,7 @@
             <div class="input-field col s12">
                 <i class="fas fa-envelope-open-text prefix"></i>
                 <textarea id="emailaddress" name="from_email" class="materialize-textarea validate" 
-                    minlength="20" maxlength="80" required></textarea>
+                    minlength="3" maxlength="50" required></textarea>
                 <label for="emailaddress">Email Address</label>
             </div>
         </div>
@@ -38,16 +38,26 @@
         <div class="row add-form">
             <div class="input-field col s12">
                 <i class="fas fa-comment-dots prefix"></i>
-                <textarea id="message" name="message" class="materialize-textarea validate" required></textarea>
+                <textarea id="message" name="message" class="materialize-textarea validate" minlength="3" maxlength="500" required></textarea>
                 <label for="message">Message</label>
             </div>
         </div>
         <!--Submit button-->
         <div class="row">
             <div class="col s12 center-align form-submit">
-                <button class="btn waves-effect waves-light" type="submit">Send
+                <a class="btn waves-effect waves-light modal-trigger" href="#modal1">Send
                     <i class="fas fa-sign-in-alt"></i>
-                </button>
+                </a>
+            </div>
+        </div>
+        <!-- Modal Structure -->
+        <div id="modal1" class="modal">
+            <div class="modal-content raleway text-color">
+            <h4>Your message has been sent!</h4>
+            <p>Thank you for getting in touch with us. We will get back to you as soon as possible.</p>
+            </div>
+            <div class="modal-footer">
+            <a href="#" class="modal-close waves-effect waves-green btn-flat" id="modal-close-btn">Close</a>
             </div>
         </div>
     </form>
