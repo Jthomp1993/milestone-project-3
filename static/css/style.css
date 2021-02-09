@@ -79,6 +79,10 @@ body {
   flex-shrink: 0;
 }
 
+.top-btn {
+    margin-top: 4rem;
+}
+
 /* -------------------------------------------------- index.html */
 
 .hero-image {
