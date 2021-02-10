@@ -76,7 +76,7 @@
     <div class="row">
         <div class="col s12 raleway text-color google-maps">
             <div class="contact-section">
-                <div class="maps-api">
+                <div id="map">
 
                 </div>
                 <div class="contact-address">
@@ -103,6 +103,9 @@
 
 {% block scripts %}
 <script src="static/js/contact.js"></script>
+<script src="static/js/maps.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWFcVnxdhfLFOn4vmoAY0qy4lHVTkvxio&callback=initMap&libraries=&v=weekly" async></script>
+
 {% endblock %}
 
 
