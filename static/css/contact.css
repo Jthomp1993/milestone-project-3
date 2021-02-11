@@ -46,7 +46,7 @@
 }
 
 #map {
-    height: 40rem;
+    height: 30rem;
     background-color: bisque;
 }
 
@@ -56,6 +56,10 @@
 
 .google-maps p {
     font-size: 14px;
+}
+
+.maps-btn {
+    margin-bottom: 1rem;
 }
 
 /* --- Media query for small screen sizes --- */
