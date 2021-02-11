@@ -52,3 +52,62 @@ document.getElementById("watford").addEventListener("click", () => {
 document.getElementById("camden").addEventListener("click", () => {
     initMap(camden);
 });
+
+var officeData = [{
+        "officeLocation": "Shoreditch",
+        "officeAddress": "16 Charlotte Road, Shoreditch, London, EC2A 3PG",
+        "telephoneHeading": "Telephone",
+        "phoneNumber": "01284 403847",
+        "emailHeading": "Email",
+        "emailAddress": "explorelondon@gmail.com"
+    },
+    {
+        "officeLocation": "Camden",
+        "officeAddress": "174 Camden High St, Camden Town, London, NW1 0NE",
+        "telephoneHeading": "Telephone",
+        "phoneNumber": "01284 4583925",
+        "emailHeading": "Email",
+        "emailAddress": "explorelondon@gmail.com"
+    },
+    {
+        "officeLocation": "Watford",
+        "officeAddress": "156 High St, Watford, WD17 2EN",
+        "telephoneHeading": "Telephone",
+        "phoneNumber": "01284 0394736",
+        "emailHeading": "Email",
+        "emailAddress": "explorelondon@gmail.com"
+}];
+
+$(document).ready(function () {
+    // This function occurs when the DOM has been loaded
+    $(".maps-btn").on('click', function (event) {
+
+        // get the ID of this
+        let officeId = $(this).attr("id").replace("-", " ");
+
+        // helper function search the 'officeData' array
+        function searchData(key, officeArray) {
+            for (var i = 0; i < officeArray.length; i++) {
+                // compare the ID being clicked with the officeData value, both toLowerCase()
+                if (officeArray[i].officeLocation.toLowerCase() == key.toLowerCase()) {
+                    return officeArray[i];
+                }
+            }
+        }
+        var office = searchData(officeId, officeData);
+
+        // call the 'getDetails' function, and pass the appropriate office details from 'officeData' array
+        getDetails(office.officeLocation, office.officeAddress, office.telephoneHeading, office.phoneNumber, office.emailHeading, office.emailAddress);
+
+    });
+});
+
+function getDetails(officeLocation, officeAddress, telephoneHeading, phoneNumber, emailHeading, emailAddress) {
+    $("#office-location").text(officeLocation);
+    $("#office-address").text(officeAddress);
+    $("#telephone-heading").text(telephoneHeading);
+    $("#phone-number").text(phoneNumber);
+    $("#email-heading").text(emailHeading);
+    $("#email-address").text(emailAddress);
+    
+};
