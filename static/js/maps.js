@@ -40,9 +40,7 @@ const watford = [{
           center: mylatlng,
         });
     
-    
-
-    if (officeLocations) {
+        if (officeLocations) {
         for (let i = 0; i < officeLocations.length; i++) {
         const marker = new google.maps.Marker({
           position: officeLocations[i].location,
@@ -52,6 +50,16 @@ const watford = [{
         }
     }
 }
+    
+    if (officeLocations) {
+        for (let i = 0; i < officeLocations.length; i++) {
+        const marker = new google.maps.Marker({
+          position: officeLocations[i].location,
+          animation: google.maps.Animation.DROP,
+          map: map,
+        });
+        }
+    }
 }
 
 document.getElementById("shoreditch").addEventListener("click", () => {
