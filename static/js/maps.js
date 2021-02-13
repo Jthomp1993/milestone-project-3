@@ -21,7 +21,7 @@ const watford = [{
 }}];
 
 // Initialize and add the map
-      function initMap(officeLocations) {
+        function initMap(officeLocations) {
         // The location of London
         const mylatlng = { lat: 51.5285582, lng: -0.2416808 };
         // The map, centered at London
@@ -29,6 +29,17 @@ const watford = [{
           zoom: 10,
           center: mylatlng,
         });
+
+    // Initalize and render the map for medium screen sizes
+    if (window.screen.width < 768) {
+        // The location of London
+        const mylatlng = { lat: 51.5285582, lng: -0.2416808 };
+        // The map, centered at London
+        const map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 9,
+          center: mylatlng,
+        });
+    
     
 
     if (officeLocations) {
@@ -41,6 +52,8 @@ const watford = [{
         }
     }
 }
+}
+
 document.getElementById("shoreditch").addEventListener("click", () => {
     initMap(shoreditch);
 });
