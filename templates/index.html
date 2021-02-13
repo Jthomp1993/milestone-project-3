@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
+    <!-- Hero image -->
     <div class="hero-image"></div>
 
     <div class="container card-container" id="card-wrapper">
@@ -44,6 +45,7 @@
     </div>
     </div>
 
+    <!-- This section enables the user to search the recommendations -->
     <div class="container search-bar-wrapper shadow" id="search-bar">
         <form action="{{url_for('search') }}#recommendations-wrapper" method="POST" class="col s12">
             <div class="row search-form">
@@ -54,6 +56,7 @@
                 </div>
             </div>
             
+            <!-- These buttons allow the user to search or reset the recommendations -->
             <div class="row">
                 <div class="col s12 center-align">
                     <button class="btn waves-effect waves-light" type="submit">Search
@@ -65,6 +68,7 @@
         </form>
     </div>
     
+    <!-- For loop to pull the recommendations data from the data base and display it -->
     <div class="container" id="recommendations-wrapper">
         <div class="row">
             {% for recommendation in recommendations %}
@@ -93,6 +97,7 @@
         </div>
     </div>
 
+    <!--This button takes the user back to the top of the page -->
     <div class="col s12 m6 center-align top-btn">
         <a href="#" class="waves-effect waves-light btn">Back to top</a>
     </div>

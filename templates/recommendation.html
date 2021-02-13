@@ -4,6 +4,7 @@
 {% endblock %}
 {% block content %}
 
+    <!-- This displays the category of the recommendation as a heading -->
     <div class="container">
         <div class="row heading-row">
             <div class="s12 center-align recommendation-heading">
@@ -12,6 +13,7 @@
         </div>
     </div>
 
+    <!--This section displays the full details of the recommendation -->
     <div class="container" id="recommendation-wrapper">
         <div class="row">
             <div class="s12 m6 recommendation-card shadow">
@@ -31,6 +33,7 @@
         </div>
     </div>
 
+    <!-- This button rediects the user back to the home page -->
     <div class="container">
         <div class="s12 center-align">
             <a href="{{ url_for('get_categories') }}" class="waves-effect waves-light btn" id="btn-click">Back to home</a>
