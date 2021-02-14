@@ -350,6 +350,22 @@ I have not shown these above for security reasons.)
 
 9. I then deployed the project by pushing it to Heroku. 
 
+## **Credits**
+
+### Content 
+
+This project is for educational purposes only. All of the content was written by myself and or by users when adding their recommendations. 
+
+### Images 
+
+All of the images on the website were taken from [Google Images](https://www.google.com/imghp?hl=EN)
+
+### Acknowledgements 
+
+* Thank you to my mentor Seun Owonikoko for her continued support and guidance throughout the development of my project. 
+* Tim, Igor and Johann from tutor support for their fantastic support and advice. 
+
+
 
 
 
