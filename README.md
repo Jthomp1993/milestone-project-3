@@ -42,8 +42,8 @@ will help me find some new and exciting things for us to do.
 
 ### Returning Users 
 
-* I am a user who has the been using the app over the last few months. I recently ate out at an amazing resteraunt in Shoreditch
-so i have returned to add it to the app as a new recommendation. 
+* I am a user who has the been using the app over the last few months. I recently ate out at an amazing restaraunt in Shoreditch
+so I have returned to add it to the app as a new recommendation. 
 
 * I am a user who visits London every summer. Last year I planned my trip using the app which was fantastic so I have returned 
 again this year to plan my upcoming trip. 

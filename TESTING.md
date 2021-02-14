@@ -1,0 +1,55 @@
+## User Stories from UX section
+
+The following tests were carried out in order to make sure the user stories mentioned in the README.md file were being met. 
+
+### **Project Stakeholders** 
+
+* Being the creator of this project, I wanted to ensure that I created a platform that was intuitive to use and would encourage users to return 
+to the website. I feel I acheived this through carefully designing the information architecture and overall desgin of the website 
+to ensure the website is easy to navigate and use appropriately. The fixed Navbar enables a user to navigate to any section of the website at any given 
+moment whilst they are using the website. The back to top buttons featured throught the website enable users to easily navigate back to the top of the page. 
+The user is able to add a recommendation from any page on the website by using the link in the Navbar or the from the add receommendation 
+button within their profile. The users recommendations are easy for them to update or delete from their profile where all of their recommendations are displayed. 
+
+### New users 
+
+* For the user who is going to be visiting London for the first time. They will be able to visit the Explore London app where they will
+be able to register and make their account. From their they will be able to explore all of the recommendations on the Home page 
+and begin to plan where they are going to stay, where they are going to go for drinks, where they are going to go to eat and what they are
+going to do. Then if they wish to after they stay in London they can add recommendations of anything else they discovered during their stay. 
+
+* For the user who lives in London and wants to discover new places to drink with their partner. The user will be able to register and create
+their own account. From there they will be able to filter the recommendations on the home page by clicking on the Drink tab. This will display 
+all of the recommendations of places to drink in London. If the user happens to discover any other new places to drink in London they 
+will be able to add their own recommendations. 
+
+* For the user who wants to plan things to do with their children during the summer holidays. The user would be able to register and make an account.
+From there they would be able to go to the home page and filter the recommendations to display all of the Explore recommendations. 
+This would provide the user with all of the recommendations of things to do in London and could decide what they wanted to do. 
+The user could also add any recommendations of their own. 
+
+### Returning Users 
+
+* For the user who wants to add a recommendation for the restaraunt that they ate at in Shoreditch. The user would be able to login to 
+their own account. From their profile or by selecting Add Recommendation from the Navbar, they would be able to add the recommendation for 
+the restaruant that they ate at in Shoreditch. The user will then have the option to update the recommendation or delete the 
+recommendation if they wish to do so. 
+
+* For the user who wants to use the website to plan their upcoming trip to London after using it to plan their trip last year. 
+The user would be able to login into their account and from their would be able to navigate to the home page. The user would be presented 
+with all of the recommendations where they would be able to begin planning everything for their upcoming vist. After their visit the user 
+would be able to add recommendations for anything new that they discovered during their trip. 
+
+* For the user who travels to London on business and uses the app to find the best places to stay. The user would be able to login 
+to their account and from there can navigate to the Home page. From there the user would be able to filter the recommendations by clicking 
+the Hotels tab and that would display all of the hotels recommendations. Here the user would be able to choose where they were going to stay during 
+their upcoming business trip. 
+
+### Mobile User 
+
+* For the user who wanted to use the app on their mobile device. Throughout the development process I made use of the 
+Materialize CSS grid system to ensure that the app is fully responsive accross all screen sizes. This means the 
+user can recieve the same experience using the app on mobile as to using it on a desktop. 
+
+
+
