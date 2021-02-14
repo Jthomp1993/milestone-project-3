@@ -249,6 +249,9 @@ flasks werkzeug for additional security measures.
 * [JQuery](https://jquery.com/) - I used JQuery to write some of the Javascript code for the website. 
 * [Google images](https://www.google.com/imghp?hl=EN) - This was used to find all of the images for the website.
 * [MongoDB](https://www.mongodb.com/3) - I used MongoDB to store all of the data for my project. 
+* [Flask](https://flask.palletsprojects.com/en/1.1.x/) - The Flask framework was used together with the Python code in this project. 
+* [Jinja](https://flask.palletsprojects.com/en/1.1.x/templating/) - Jinja was used for template inheritence and to connect the backend to the front end. 
+* [PyMongo](https://pymongo.readthedocs.io/en/stable/) - This Python API helped me to connect the back end and front end. 
 
 ### Tools 
 
