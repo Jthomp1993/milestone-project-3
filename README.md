@@ -147,12 +147,63 @@ Colour Pallette:
 ![Colour pallete created with coloors.co](/images/readme-images/color-pallette.png)
 
 Wireframes
-![Wireframes created in Figma](/images/readme-images/figma-1.png)
+![Wireframes created in Figma](static/images/readme-images/figma-1.png)
 
-![Wireframes created in Figma](/images/readme-images/figma-2.png)
+![Wireframes created in Figma](static/images/readme-images/figma-2.png)
 
 [You can view the Figma wireframes project here](https://www.figma.com/file/vjVx7MI3YPWt23be1YY93j/Milestone-Project-3?node-id=0%3A1)
+
+[Back to Top](#table-of-contents)
  
+## **Features**
 
+### Existing features
 
+* Navbar - Materialize was used to create the Navbar for the website which is featured accross all pages on the website. the Navbar is fixed 
+to the top of the page allowing the user to access all pages at all times. On small screen sizes the Navbar collapsies into a side nav bar. 
 
+* Hero images - Most of the pages accross the website feature hero images at the top of the page. These are visually pleasing and help draw in
+the users attention. 
+
+* Footer - The footer section is featured on all pages accross the website and has links to the website social media links. 
+As I don't actually have social media set up for the website these links just direct the user to that paticular social media website. 
+
+* Home Page - The home page is the first place users arrive when visiting the website. It contains a hero image at the top of the page proceeded by 
+a message welcoming users to the website. The main content of the home page is all of the recommendations that users have added to 
+the website. There is a section which displays the categories of the recommendations which the users can use to filtet the recommendations
+and also a search bar which allows the users to search the recommendations. 
+
+* Profile Page - This page is only available to users who have created an account. After logging in users will be redirected to their own profile 
+page and will be presented with a welcome message. The profile page will display all of the users recommendations and will give them 
+the opportunity to edit or delete them. 
+
+* Add Recommendation Page - This page contains a hero image at the top of the page followed by a form which enables the user to add their own recommendation
+to the website. 
+
+* Contact Page - This page contains a hero image at the top of the page followed by a form which enables the user to give their details 
+and send an email to the team at Explore London. After this the user is presented with a Google Map which allows the user to select an office and a marker 
+will be dropped onto the map to display the location. The full details for that paticular office will then be displayed below the map. 
+
+* Login Page - This page contains a full screen background image and a form which allows the user to enter their details and 
+login into their acount. If the user enters an incorrect username or password they will be redirected to the login page and a flash message will
+be displayed informing them their details were incorrect. 
+
+* Register Page - This page contains a full screen background image and a form which allows a user to enter a username and password to create their 
+account. If the username already happens to exist the user will be redirected to the register page and a flash message will be displayed 
+informing the user that the username they chose already exists. 
+
+* Logout functionality - The log out button removes the user from the current session and redirects them to the login page displaying a flash message 
+informing them that they have been logged out. 
+
+* Manage Categories Pages - This page is only accessible to the Admin for the website. This gives the Admin the capacity to add, edit and delete categories. 
+
+### Future releases 
+
+* I would like to add functionality so that users could add a google map to their recommendation displaying the location. 
+
+* I would like to give the users the opportunity to be able to update their password from their profile page. 
+
+* I would like to add the EmailJS functionality so that when users register they recieve an email informing them 
+that their account has been created. 
+
+[Back to Top](#table-of-contents)
