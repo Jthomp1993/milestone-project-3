@@ -268,3 +268,90 @@ flasks werkzeug for additional security measures.
 
 [Back to Top](#table-of-contents)
 
+## **Testing**
+
+The testing for this project can be found [here]()
+
+## **Deployment**
+***
+
+The deployed project can be viewed [here]()
+The projects GitHub repository can be viewed [here]()
+
+### Cloning 
+
+If you would like to deploy your own version of my project and develop it even further use the following steps:
+
+1. Visit my repository on ‘Github pages’
+
+2. Click on the green code button
+
+3. If you want to clone the repository using HTTPS, under clone with HTTPS click the folder icons to copy the URL.
+* If you want to clone the repository using SSH Key, including a certificate issued by your organization's SSH certificate authority, click Use SSH and click the folder to copy the URL. 
+* To clone a repository using GitHub CLI, click Use GitHub CLI, then click the folder icon to copy the URL. 
+
+4. Next open your terminal 
+
+5. Then you need to change the directory to the location where you want the cloned directory. 
+
+6. Type git clone followed by the URL that you had copied earlier. 
+
+7. Next press enter to create your local clone. 
+
+8. The next step is you need to create a database for you to use with this cloned repository with MongoDB.
+
+9. Next return to the terminal and enter the following command to install all of the dependencies that are required to run the project. 
+* pip install -r requirements.txt
+
+10. Next you need to create an env.py file with the following content. Be sure to replace the appropriate parts with the details of your own MongoDB database. 
+* import os
+os.environ.setdefault("MONGO_URI", "mongodb+srv://<username>:<password>@<cluster_name>.mj6ld.mongodb.net/<database_name>?retryWrites=true&w=majority")
+
+11. Be sure to add your env.py to a .gitignore file to ensure that this file is not pushed to your GitHub repositiory. 
+
+12. Your repository is now ready to run using the following command. 
+* python3 app.py
+
+If you would like to learn more about cloning repositories you can do so from the following [link](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
+
+### Deploying to Heroku 
+
+I used the following steps to deploy my project to Heroku: 
+
+1. Firslty I began by creating an account with Heroku. From here I created a new app which prompted to give my app a unique name which is explore-london.
+Next I set the region to the nearest one to me which happened to be Europe. 
+
+2. Once i had created the app the next step was to head to the settings tab and click on reveal config vars. From here I entered the following details. 
+* IP - 0.0.0.0
+* MONGO_DBNAME - explore_london
+* MONGO_URI - "mongodb+srv://<username>:<password>@<cluster_name>.mj6ld.mongodb.net/<database_name>?retryWrites=true&w=majority"
+* PORT - 5000
+
+(NOTE: You need to change the username, password, cluster name and database name sections within the MONGO_URI to match that of your database however 
+I have not shown these above for security reasons.)
+
+3. Next I created a requirements.txt file in my editor with the following command:
+* pip3 freeze --local > requirements.txt
+
+4. Next I created a Procfile conatining the following content:
+* echo web: python app.py > Procfile
+
+5. I then added and commited these files to my github repository with the following commands:
+* git add .
+* git commit -m ""
+
+6. The next step was to login into Heroku within the termianl using the following command: 
+* heroku login 
+
+7. Next I linked my Heroku app using the following command:
+* heroku git:remote -a explore-london
+
+8. Next I went to the Deploy tab in Heroku and enabled automatic deploys from my github master branch. 
+
+9. I then deployed the project by pushing it to Heroku. 
+
+
+
+
+
+
