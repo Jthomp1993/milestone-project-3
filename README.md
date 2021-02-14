@@ -140,6 +140,18 @@ I used Google fonts to select the fonts for the app and I decided to use the Ral
 load correctly. 
 
 I used font awesome throughout the website for various icons which are predominantly used on buttons. 
+
+## **The Design Proccess**
+
+Colour Pallette:
+![Colour pallete created with coloors.co](/images/readme-images/color-pallette.png)
+
+Wireframes
+![Wireframes created in Figma](/images/readme-images/figma-1.png)
+
+![Wireframes created in Figma](/images/readme-images/figma-2.png)
+
+[You can view the Figma wireframes project here](https://www.figma.com/file/vjVx7MI3YPWt23be1YY93j/Milestone-Project-3?node-id=0%3A1)
  
 
 
