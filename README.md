@@ -227,3 +227,41 @@ was created.
 flasks werkzeug for additional security measures. 
 
 ![Users collection in MongoDB](static/images/readme-images/users-mongo.png)
+
+## **Technologies Used**
+***
+
+### Languages 
+
+* [HTML5](https://en.wikipedia.org/wiki/HTML5) - HTML5 was used to build the core structure of the website.
+* [CSS3](https://en.wikipedia.org/wiki/CSS) - CSS3 was used to style the HTML5 elements.
+* [JavaScript](https://en.wikipedia.org/wiki/JavaScript) - JavaScript was used to provide interactive functionality.
+* [Python](https://www.python.org/) - Python was used to build the app and back end functionality. 
+
+### Libraries, frameworks, databases and editors
+
+* [Materialize](https://materializecss.com/) - Materialize was used to create many of the compnenets throughout the website. I particularly made use of their CSS grid system to make my website responsive. 
+* [EmailJS](https://www.emailjs.com/) - EmailJS was used to enable the user to send an email from the contact page. 
+* [Font Awesome](https://fontawesome.com/) - This was used to import the arrow symbol use on the buy tickets link on the Live page. 
+* [Github](https://github.com/) - This was used to store the repository for my website and host it on Github pages.
+* [Git](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control) - Throughout the development of my website I made use of Git version control to ensure all changes and additions to my code were added to the repository. 
+* [Gitpod](https://gitpod.io/) - This was used to write all code for the website. 
+* [JQuery](https://jquery.com/) - I used JQuery to write some of the Javascript code for the website. 
+* [Google images](https://www.google.com/imghp?hl=EN) - This was used to find all of the images for the website.
+* [MongoDB](https://www.mongodb.com/3) - I used MongoDB to store all of the data for my project. 
+
+### Tools 
+
+* [Adobe Photoshop](https://www.adobe.com/uk/products/photoshop.html) - This was used to resize images.
+* [Am I Responsive](http://ami.responsivedesign.is/) - This was used to show how my website is responsive across all screen sizes. 
+* [Free Online HTML Formatter](https://www.freeformatter.com/html-formatter.html) - This was used to format my HTML code to improve readability. 
+* [Free Online CSS Formatter](https://www.freeformatter.com/css-beautifier.html) - This was used to format my CSS code to improve readability.
+* [Free Online JavaScript Formatter](https://www.freeformatter.com/javascript-beautifier.html) - This was used to format my Javascript code to improve readability.
+* [Figma](https://www.figma.com/) - This was used to create the wireframes. 
+* [Google](https://www.google.com/) - Google was used extensively throughout the design and development process for images, researching solutions to coding issues and information to use in my website. 
+* [Google maps](https://www.google.co.uk/maps/) - This was used to get the coordinates of the music venues. 
+* [Google developers](https://developers.google.com/) - This was used to implement the Google Maps API. 
+* [Coloors.co](https://coolors.co/ed6a5a-f4f1bb-9bc1bc-e6ebe0-36c9c6) - I used this to generate the colour scheme for my project. 
+
+[Back to Top](#table-of-contents)
+
