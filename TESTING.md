@@ -51,5 +51,40 @@ their upcoming business trip.
 Materialize CSS grid system to ensure that the app is fully responsive accross all screen sizes. This means the 
 user can recieve the same experience using the app on mobile as to using it on a desktop. 
 
+## W3C HTML Validator
+
+When my HTML code was passed through the W3C HTML validator it returned the following errors. All of these errors can be overlooked as they are due
+to the jinja template inheritance. These errors occured throughout all of the HTML pages which was fully expected. 
+
+* Error: Bad value {{ url_for('edit_recommendation', recommendation_id=recommendation._id) }}#recommendations-wrapper for attribute action on element form: Illegal character in path segment: { is not allowed.
+
+* Error: Element head is missing a required instance of child element title.
+
+* Error: Non-space characters found without seeing a doctype first. Expected <!DOCTYPE html>.
+
+* Warning: Consider adding a lang attribute to the html start tag to declare the language of this document.
+
+* Error: Text not allowed in element select in this context.
+
+### contact.html
+
+The following error was returned when the contact.html file was passed through the HTML validator. This can be overlooked as the data is being 
+appended into the element with JavaScript. 
+
+* Warning: Empty heading.
+
+### base.html 
+
+The following error was returned when passing the base.html code through the validator. This may be overlooked as this code is copied from 
+the EmailJS documentation. The other 3 errors may also be overlooked due to jinja template inheritence. 
+
+* Warning: The type attribute is unnecessary for JavaScript resources.
+
+* Error: Stray end tag head.
+
+* Error: Start tag body seen but an element of the same type was already open.
+
+* Fatal Error: Cannot recover after last error. Any further errors will be ignored.
+
 
 
