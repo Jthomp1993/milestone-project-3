@@ -86,5 +86,28 @@ the EmailJS documentation. The other 3 errors may also be overlooked due to jinj
 
 * Fatal Error: Cannot recover after last error. Any further errors will be ignored.
 
+## W3C CSS Validator 
+
+All of my CSS files passed through the validator without any errors. 
+
+## JavaScript Testing (JSHint)
+
+### Contact.js 
+
+The code from contact.js return an error for a missing semi colon which I ammended and the following error which may be overlooked. 
+
+* 	'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
+
+### maps.js 
+
+The code from maps.js returned a series of ES6 errors when passed through JSHitn which call be overlooked. It also returned two undefined
+variables which one of is from Jquery and the other from the google maps api code. Both of these can also be overlooked. 
+
+### script.js 
+
+The code from script.js returned two ES6 errors which may be overlooked and also a series of undefined variable errors due to the 
+Jquery $ syntax, this may also be overlooked. 
+
+
 
 
