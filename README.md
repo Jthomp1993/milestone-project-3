@@ -144,7 +144,7 @@ I used font awesome throughout the website for various icons which are predomina
 ## **The Design Proccess**
 
 Colour Pallette:
-![Colour pallete created with coloors.co](/images/readme-images/color-pallette.png)
+![Colour pallete created with coloors.co](static/images/readme-images/color-pallette.png)
 
 Wireframes
 ![Wireframes created in Figma](static/images/readme-images/figma-1.png)
@@ -207,3 +207,23 @@ informing them that they have been logged out.
 that their account has been created. 
 
 [Back to Top](#table-of-contents)
+
+## **The Database Structure**
+
+All of the data for my project is stored in a MongoDB database. The database is made up of 3 collections that are as follows:
+
+* Categories - This collection stores the data for the categories of the recommendations. It consists of the category name, 
+categoery information and the category image. 
+
+![Categories collection in MongoDB](static/images/readme-images/categories-mongo.png)
+
+* Recommendations - This collection contains the data for each of the recommendations that are added to the website. It consists of the 
+the recommendation name, category, information, description, image, who the recommendation was created by and the date the recommendation
+was created. 
+
+![Recommendations collection in MongoDB](static/images/readme-images/recommendations-mongo.png)
+
+* Users - This collection stores the username and password of the users when they create their account. the password is hashed using 
+flasks werkzeug for additional security measures. 
+
+![Users collection in MongoDB](static/images/readme-images/users-mongo.png)
