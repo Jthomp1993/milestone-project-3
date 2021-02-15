@@ -1,8 +1,42 @@
 # Milestone Project 3 - Explore London 
 View the live project here 
+***
+
+## Table Of Contents
+
+- [User Experience](#User-Experience)
+    - [User Stories](#User-Stories)
+    - [Project Stakeholders](#Project-Stakeholders)
+    - [New users](#New-users)
+    - [Returning Users](#Returning-Users)
+    - [Mobile user](#Mobile-user)
+- [Design Process](#Design-Process)
+    - [UX Research](#UX-Research)
+- [UX Design](#UX-Design)
+    - [The Strategy Plane](#The-Strategy-Plane)
+    - [The Scope Plane](#The-Scope-Plane)
+    - [The Structure Plane](#The-Structure-Plane)
+    - [The Skeleton Plane](#The-Skeleton-Plane)
+    - [The Surface Plane](#The-Surface-Plane)
+- [The Design Proccess](#The-Design-Proccess)
+- [Features](#Features)
+    - [Existing features](#Existing-features)
+    - [Future releases](#Future-releases)
+- [The Database Structure](#The-Database-Structure)
+- [Technologies Used](#Technologies-Used)
+    - [Languages](#Languages)
+    - [Tools](#Tools)
+- [Testing](#Testing)
+- [Deployment](#Deployment)
+    - [Cloning](#Cloning)
+    - [Deploying to Heroku](#Deploying-to-Heroku)
+- [Credits](#Credits)
+    - [Content](#Content)
+    - [Images](#Images)
+    - [Acknowledgements](#Acknowledgements)
 
 ***
-## **What is the purpose of this project?**
+## What is the purpose of this project?
 Explore London is an app that aims to provide a platform where users are able to discover the best places to stay, eat and
 drink as well as the best things to do in the capitol. The app will enable users to register and create their own account where 
 they will be able to add their own recommendations to the website as well as edit and delete them if they wish to do so. 
@@ -14,7 +48,7 @@ The main aim for me was to create an app that had an intuitive user interface an
 
 This project was my third Milestone Project as part of the Diploma in Software Development at Code Institute.
 
-## **User Experience**
+## User Experience
 
 <div><img></div>
 
@@ -23,7 +57,7 @@ This project was my third Milestone Project as part of the Diploma in Software D
 Before I began the design proccess for my project I created the following user stories. This really helped me understand more 
 about the kind of users the website may attract and how I could go about desinging an interface that would satisfy their needs. 
 
-### **Project Stakeholders** 
+### Project Stakeholders
 
 * Being the creator of the Exlpore London app I am the main project stakeholder so it was in my best interest to provide 
 a platform that staisfied all potential users needs through an intuitive user interface that is easy on the eye and simple to navigate 
@@ -56,7 +90,7 @@ in London whilst I am on my business trips.
 * I am a user who wants to use the app on my mobile device. I want it to be intuitive to use as well as the information being presented 
 in a clear and organised fashion. 
 
-## **Design Proccess**
+## Design Process
 
 ### UX Research 
 
@@ -69,7 +103,7 @@ The following web pages helped give me inspiration to beign designing my own pro
 * https://www.tripadvisor.co.uk/
 * https://gregory4321.github.io/milestone-project-2/
 
-## **UX Design**
+## UX Design
 
 ### The Strategy Plane
 
@@ -141,7 +175,7 @@ load correctly.
 
 I used font awesome throughout the website for various icons which are predominantly used on buttons. 
 
-## **The Design Proccess**
+## The Design Proccess
 
 Colour Pallette:
 ![Colour pallete created with coloors.co](static/images/readme-images/color-pallette.png)
@@ -155,7 +189,7 @@ Wireframes
 
 [Back to Top](#table-of-contents)
  
-## **Features**
+## Features
 
 ### Existing features
 
@@ -208,7 +242,7 @@ that their account has been created.
 
 [Back to Top](#table-of-contents)
 
-## **The Database Structure**
+## The Database Structure
 
 All of the data for my project is stored in a MongoDB database. The database is made up of 3 collections that are as follows:
 
@@ -228,7 +262,7 @@ flasks werkzeug for additional security measures.
 
 ![Users collection in MongoDB](static/images/readme-images/users-mongo.png)
 
-## **Technologies Used**
+## Technologies Used
 ***
 
 ### Languages 
@@ -268,11 +302,11 @@ flasks werkzeug for additional security measures.
 
 [Back to Top](#table-of-contents)
 
-## **Testing**
+## Testing
 
 The testing for this project can be found [here]()
 
-## **Deployment**
+## Deployment
 ***
 
 The deployed project can be viewed [here]()
@@ -350,7 +384,7 @@ I have not shown these above for security reasons.)
 
 9. I then deployed the project by pushing it to Heroku. 
 
-## **Credits**
+## Credits
 
 ### Content 
 
