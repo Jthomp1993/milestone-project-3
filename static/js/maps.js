@@ -142,3 +142,11 @@ function getDetails(officeLocation, officeAddress, telephoneHeading, phoneNumber
     $("#email-address").text(emailAddress);
 
 };
+
+// ** Sources of guidance used to create this code
+
+// https://developers.google.com/maps/documentation/javascript/adding-a-google-map
+// https://developers.google.com/maps/documentation/javascript/markers
+// https://github.com/mkthewlis/Milestone-Project-2
+// https://stackoverflow.com/questions/17746737/how-to-append-string-to-a-href-with-jquery-or-javascript
+// https://stackoverflow.com/questions/32772363/how-does-this-hash-work/32772416#32772416
