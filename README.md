@@ -52,8 +52,6 @@ This project was my third Milestone Project as part of the Diploma in Software D
 
 ## User Experience
 
-<div><img></div>
-
 ## User Stories 
 
 Before I began the design proccess for my project I created the following user stories. This really helped me understand more 
