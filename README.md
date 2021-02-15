@@ -2,6 +2,8 @@
 View the deployed live project [here](https://explore-london.herokuapp.com/)
 ***
 
+[Am I Responsive Image](responsive.png)
+
 ## Table Of Contents
 
 - [User Experience](#User-Experience)
