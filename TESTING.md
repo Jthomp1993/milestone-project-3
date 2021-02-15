@@ -159,5 +159,75 @@ Below you can see an example of a test email being sent directly to my own googl
 I ran into a bug when I added the modal to my EmailJS form which was preventing the emails from sending. It turned out that this was due to Materialize which I have learned 
 is quite a common issue. With the help of Johann from tutor support we managed to solve the problem. To get around what we did was 
 to get the form and store it inside the form variable. Then in the event listener for the modal close button we used emailjs.sendForm 
-instead of emailjs.send and then passed the whole form in there via the form variable. 
+instead of emailjs.send and then passed the whole form in there via the form variable. The form is then reset to allow it to be used again.
+
+## **Manual Testing**
+
+### Navigation Bar 
+
+* Logo - I tested this by clicking on it to ensure it led me back to the home page. 
+
+* Home -  I tested this by clicking on it to ensure it directs the user back to the Home page. 
+
+* Profile - I tested this by clicking on it to ensure that it directs the user back to their profile. 
+
+* Add recommendation - I tested this by clicking on it to ensure it directs the user to the add recommendation page. 
+
+* Manage Categories - I tested this by clicking on it to ensure that it directs the Admin for the website to the Manage Categories page.
+
+Contact - I tested this by clicking on it to ensure that it directs the user to the contact page. 
+
+Register - I tested this by clicking on it to ensure that it directs the user to the regsiter page. 
+
+Log in - I tested this by clicking on it to ensure that it directs the user to the log in page. 
+
+Log out - I tested this by clicking on it to ensure that it logs the out of the current session. 
+
+### Footer 
+
+To test the functionality of my footer section I clicked on each of the social media icons to ensure that 
+it directs the user to the correct website. 
+
+### Home page 
+
+* Categories - I tested this by clicking each of the categoeries to ensure it filter the recommendations correctly. 
+
+* Search bar - I tested this by searching for various items in the recommendations which worked efficiently. 
+
+* Recommendations - I tested this by clicking on each recommendation to ensure it directs the user to the correct page. 
+
+### Profile page 
+
+* Add recommendation button - I tested this by clicking on it to ensure it directed the user to the add recommendation page. 
+
+* Edit button - I tested this by clicking on the edit button to ensure that it directs the user to the edit recommendation page. 
+
+* Delete Button - I tested this by clicking on the delete button to ensure that the modal was presented allowing the user to delete their recommendation. 
+
+### Add Recommendation 
+
+I tested the Add Recommendation functionality by adding multiple recommendations to the website which works efficiently. 
+
+### Manage Categories 
+
+* Edit button - I tested this by clicking on the edit button to ensure that it directs the Admin for the website to the edit category page. 
+
+* Delete button - I tested this by clicking on it to ensure that it presneted the modal to the Admin of the page enabling them to delete the category. 
+
+* Add Category button - I tested this by clicking on it to ensure that it directs the Admin for the website to the Add Category page. 
+
+### Contact 
+
+* EmailJS - The testing for EmailJS can be seen in the testing EmailJS section on this page. 
+
+* Google Maps API - I tested this by clicking each of the buttons to ensure it dropped the appropriate marker onto the map 
+and appended in the correct data from the JavaScript file. 
+
+### Register 
+
+I tested the functionality of the Register page by creating a number of accounts which works correctly. 
+
+### Login 
+
+I tested the functionality of the Login page by logging in with some of the of accounts that i created which works as expected. 
 
