@@ -264,3 +264,5 @@ I tested the functionality of the Register page by creating a number of accounts
 
 I tested the functionality of the Login page by logging in with some of the of accounts that i created which works as expected. 
 
+[Return to previous document](/README.md)
+
