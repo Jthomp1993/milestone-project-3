@@ -304,7 +304,7 @@ flasks werkzeug for additional security measures.
 
 ## Testing
 
-The testing for this project can be found [here]()
+The testing for this project can be found [here](/TESTING.md)
 
 ## Deployment
 ***
