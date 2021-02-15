@@ -1,8 +1,41 @@
-## **User Stories from UX section**
+## Table Of Contents
+
+- [User Stories from UX section](#User-Stories-from-UX-section)
+    - [Project Stakeholders](#Project-Stakeholders)
+    - [New users](#New-users)
+    - [Returning Users](#Returning-Users)
+    - [Mobile User](#Mobile-User)
+- [W3C HTML Validator](#W3C-HTML-Validator)
+    - [contact.html](#contact.html)
+    - [base.html](#base.html)
+- [W3C CSS Validator](#W3C-CSS-Validator)
+- [JavaScript Testing (JSHint)](#JavaScript-Testing-(JSHint))
+    - [Contact.js](#Contact.js)
+    - [maps.js](#maps.js)
+    - [script.js](#script.js)
+    -[Python](#Python)
+- [Compatibility Tests](#Compatibility-Tests)
+    - [Testing Different Browsers](#Testing-Different-Browsers)
+    - [Testing With Different Devices](#Testing-With-Different-Devices)
+    - [Using DevTools Throughout Development](#Using-DevTools-Throughout-Development)
+- [Testing EmailJS](#Testing-EmailJS)
+- [Manual Testing](#Manual-Testing)
+    - [Navigation Bar](#Navigation-Bar)
+    - [Footer](#Footer)
+    - [Home page](#Home-page)
+    - [Profile page](#Profile-page)
+    - [Add Recommendation](#Add-Recommendation)
+    - [Manage Categories](#Manage-Categories)
+    - [Contact](#Contact)
+    - [Register](#Register)
+    - [Login](#Login)
+***
+
+## User Stories from UX section
 
 The following tests were carried out in order to make sure the user stories mentioned in the README.md file were being met. 
 
-### **Project Stakeholders** 
+### Project Stakeholders
 
 * Being the creator of this project, I wanted to ensure that I created a platform that was intuitive to use and would encourage users to return 
 to the website. I feel I acheived this through carefully designing the information architecture and overall desgin of the website 
@@ -51,7 +84,7 @@ their upcoming business trip.
 Materialize CSS grid system to ensure that the app is fully responsive accross all screen sizes. This means the 
 user can recieve the same experience using the app on mobile as to using it on a desktop. 
 
-## **W3C HTML Validator**
+## W3C HTML Validator
 
 When my HTML code was passed through the W3C HTML validator it returned the following errors. All of these errors can be overlooked as they are due
 to the jinja template inheritance. These errors occured throughout all of the HTML pages which was fully expected. 
@@ -86,11 +119,11 @@ the EmailJS documentation. The other 3 errors may also be overlooked due to jinj
 
 * Fatal Error: Cannot recover after last error. Any further errors will be ignored.
 
-## **W3C CSS Validator** 
+## W3C CSS Validator 
 
 All of my CSS files passed through the validator without any errors. 
 
-## **JavaScript Testing (JSHint)**
+## JavaScript Testing (JSHint)
 
 ### Contact.js 
 
@@ -115,7 +148,7 @@ I ran my python code through the following validators to ensure it met the PEP8 
 * [PEP8 Online Check](http://pep8online.com/checkresult)
 * [PythonChecker](https://www.pythonchecker.com/)
 
-## **Compatibility Tests**
+## Compatibility Tests
 
 ### Testing Different Browsers
 
@@ -144,7 +177,7 @@ me to achieve the responsivess that I wanted my project to have. After adding ea
 how that paticular feature behaved accross the different screen sizes. Through a combination of CSS, media queries and the Materialize 
 CSS Grid System I was able to adapt my project accross all the different screen sizes. 
 
-## **Testing EmailJS** 
+## Testing EmailJS
 
 On the contact page of my project I have an EmailJS form set up which allows the users to contact the Explore London team with any
 queries that they may have. Throughout the installation of EmailJS I was sending test emails to ensure they were 
@@ -161,7 +194,7 @@ is quite a common issue. With the help of Johann from tutor support we managed t
 to get the form and store it inside the form variable. Then in the event listener for the modal close button we used emailjs.sendForm 
 instead of emailjs.send and then passed the whole form in there via the form variable. The form is then reset to allow it to be used again.
 
-## **Manual Testing**
+## Manual Testing
 
 ### Navigation Bar 
 
