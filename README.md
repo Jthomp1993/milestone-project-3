@@ -2,7 +2,7 @@
 View the deployed live project [here](https://explore-london.herokuapp.com/)
 ***
 
-[Am I Responsive Image](responsive.png)
+![Am I Responsive Image](static/images/readme-images/responsive.png)
 
 ## Table Of Contents
 
