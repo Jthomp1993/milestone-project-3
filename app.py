@@ -322,7 +322,7 @@ if __name__ == "__main__":
             port=int(os.environ.get("PORT")), debug=True)
 
 
-""" ** Sources of guidance used to create this code ** """
+# ** Sources of guidance used to create this code **
 
-""" The course content from code institute """
-""" https://github.com/adamdelancey/ms3-tips/blob/master/app.py """
+# The course content from code institute
+# https://github.com/adamdelancey/ms3-tips/blob/master/app.py

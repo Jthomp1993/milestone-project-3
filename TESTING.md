@@ -1,4 +1,4 @@
-## User Stories from UX section
+## **User Stories from UX section**
 
 The following tests were carried out in order to make sure the user stories mentioned in the README.md file were being met. 
 
@@ -51,7 +51,7 @@ their upcoming business trip.
 Materialize CSS grid system to ensure that the app is fully responsive accross all screen sizes. This means the 
 user can recieve the same experience using the app on mobile as to using it on a desktop. 
 
-## W3C HTML Validator
+## **W3C HTML Validator**
 
 When my HTML code was passed through the W3C HTML validator it returned the following errors. All of these errors can be overlooked as they are due
 to the jinja template inheritance. These errors occured throughout all of the HTML pages which was fully expected. 
@@ -86,11 +86,11 @@ the EmailJS documentation. The other 3 errors may also be overlooked due to jinj
 
 * Fatal Error: Cannot recover after last error. Any further errors will be ignored.
 
-## W3C CSS Validator 
+## **W3C CSS Validator** 
 
 All of my CSS files passed through the validator without any errors. 
 
-## JavaScript Testing (JSHint)
+## **JavaScript Testing (JSHint)**
 
 ### Contact.js 
 
@@ -108,6 +108,56 @@ variables which one of is from Jquery and the other from the google maps api cod
 The code from script.js returned two ES6 errors which may be overlooked and also a series of undefined variable errors due to the 
 Jquery $ syntax, this may also be overlooked. 
 
+### Python 
 
+I ran my python code through the following validators to ensure it met the PEP8 standards. The tests returned no errors in my code. 
 
+* [PEP8 Online Check](http://pep8online.com/checkresult)
+* [PythonChecker](https://www.pythonchecker.com/)
+
+## **Compatibility Tests**
+
+### Testing Different Browsers
+
+I manually tested my project to ensure it was compatible with the following browsers. I also made sure that the project was 
+fully responsive accross all screen sizes by using each browsers version of developer tools. There were no issues found during these
+tests. 
+
+* Google Chrome 
+* Mozilla Firefox 
+* Safari 
+
+### Testing With Different Devices
+
+I tested my project on all of the devices that I had access to which were the following. There were no issues found during these 
+tests.
+
+* Apple Macbook Pro 13"
+* Apple Iphone 11 
+* Apple Ipad 
+* Apple Ipad Mini 
+
+### Using DevTools Throughout Development 
+
+I used Google Chromes Developer Tools extensively throughout the development process of my project. This tool really helped 
+me to achieve the responsivess that I wanted my project to have. After adding each new feature I would check in Devtools to see
+how that paticular feature behaved accross the different screen sizes. Through a combination of CSS, media queries and the Materialize 
+CSS Grid System I was able to adapt my project accross all the different screen sizes. 
+
+## **Testing EmailJS** 
+
+On the contact page of my project I have an EmailJS form set up which allows the users to contact the Explore London team with any
+queries that they may have. Throughout the installation of EmailJS I was sending test emails to ensure they were 
+being sent and received. 
+
+Below you can see an example of a test email being sent directly to my own google email account. 
+
+[EmailJS Test](static/images/readme-images/emailjs-test1.png)
+[EmailJS Test](static/images/readme-images/emailjs-test2.png)
+[EmailJS Test](static/images/readme-images/emailjs-test3.png)
+
+I ran into a bug when I added the modal to my EmailJS form which was preventing the emails from sending. It turned out that this was due to Materialize which I have learned 
+is quite a common issue. With the help of Johann from tutor support we managed to solve the problem. To get around what we did was 
+to get the form and store it inside the form variable. Then in the event listener for the modal close button we used emailjs.sendForm 
+instead of emailjs.send and then passed the whole form in there via the form variable. 
 
