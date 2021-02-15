@@ -3,41 +3,37 @@
 <link rel="stylesheet" href="{{ url_for('static', filename='css/recommendation.css') }}" type="text/css">
 {% endblock %}
 {% block content %}
-
-    <!-- This displays the category of the recommendation as a heading -->
-    <div class="container">
-        <div class="row heading-row">
-            <div class="s12 center-align recommendation-heading">
-                <h2 class="text-color bold raleway">{{ recommendation.recommend_category }}</h2>
+<!-- This displays the category of the recommendation as a heading -->
+<div class="container">
+    <div class="row heading-row">
+        <div class="s12 center-align recommendation-heading">
+            <h2 class="text-color bold raleway">{{ recommendation.recommend_category }}</h2>
+        </div>
+    </div>
+</div>
+<!--This section displays the full details of the recommendation -->
+<div class="container" id="recommendation-wrapper">
+    <div class="row">
+        <div class="s12 m6 recommendation-card shadow">
+            <div class="recommend-name">
+                <h2 class="raleway text-color bold">{{ recommendation.recommend_name }}</h2>
+            </div>
+            <div class="recommend-description">
+                <p class="raleway text-color">{{ recommendation.recommend_description }}</p>
+            </div>
+            <div class="recommend-author">
+                <p class="raleway text-color"><i>Created by: {{ recommendation.created_by }}</i></p>
+            </div>
+            <div class="recommend-image center-align">
+                <img class="shadow" src="{{ recommendation.recommend_image }}" alt="">
             </div>
         </div>
     </div>
-
-    <!--This section displays the full details of the recommendation -->
-    <div class="container" id="recommendation-wrapper">
-        <div class="row">
-            <div class="s12 m6 recommendation-card shadow">
-                <div class="recommend-name">
-                    <h2 class="raleway text-color bold">{{ recommendation.recommend_name }}</h2>
-                </div>
-                <div class="recommend-description">
-                    <p class="raleway text-color">{{ recommendation.recommend_description }}</p>
-                </div>
-                <div class="recommend-author">
-                    <p class="raleway text-color"><i>Created by: {{ recommendation.created_by }}</i></p>
-                </div>
-                <div class="recommend-image center-align">
-                    <img class="shadow" src="{{ recommendation.recommend_image }}" alt="">
-                </div>
-            </div>
-        </div>
+</div>
+<!-- This button rediects the user back to the home page -->
+<div class="container">
+    <div class="s12 center-align">
+        <a href="{{ url_for('get_categories') }}" class="waves-effect waves-light btn" id="btn-click">Back to home</a>
     </div>
-
-    <!-- This button rediects the user back to the home page -->
-    <div class="container">
-        <div class="s12 center-align">
-            <a href="{{ url_for('get_categories') }}" class="waves-effect waves-light btn" id="btn-click">Back to home</a>
-        </div>
-    </div>
-
+</div>
 {% endblock %}

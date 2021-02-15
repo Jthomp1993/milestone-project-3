@@ -2,11 +2,8 @@
 {% block styles %}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/add_recommendation.css') }}" type="text/css">
 {% endblock %}
-
-
 {% block content %}
 <div class="row add-hero-image hide-on-small-only"></div>
-
 <!-- Page heading -->
 <div class="container">
     <div class="row">
@@ -15,92 +12,79 @@
         </div>
     </div>
 </div>
-
-
 <!-- Form which enables the user to add their own recommendations to the website -->
 <div class="container add-wrapper shadow">
-<div class="row card-panel">
-    <form class="col s12" method="POST" action="{{ url_for('add_recommendation') }}#recommendations-wrapper">
-    <!--Category select-->
-    <div class="row add-form">
-        <div class="input-field col s12">
-            <i class="fas fa-folder-open prefix"></i>
-            <select id="recommend_category" name="recommend_category" class="validate" required>
-                <option value="" disabled selected class="text-color">Choose category</option>
-                {% for category in categories %}
-                    <option value="{{ category.category_name }}">{{ category.category_name }}</option>
-                {% endfor %}
-            </select>
-            <label for="recommend_category">Recommendation Category</label>
-        </div>
-    </div>
-        <!--Recommendation name-->
-        <div class="row add-form">
-            <div class="input-field col s12">
-                <i class="fas fa-tags prefix"></i>
-                <textarea id="recommend_name" name="recommend_name" class="materialize-textarea validate" minlength="3" maxlength="30" required></textarea>
-                <label for="recommend_name">Recommendation Name</label>
+    <div class="row card-panel">
+        <form class="col s12" method="POST" action="{{ url_for('add_recommendation') }}#recommendations-wrapper">
+            <!--Category select-->
+            <div class="row add-form">
+                <div class="input-field col s12">
+                    <i class="fas fa-folder-open prefix"></i>
+                    <select id="recommend_category" name="recommend_category" class="validate" required>
+                        <option value="" disabled selected class="text-color">Choose category</option>
+                        {% for category in categories %}
+                        <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                        {% endfor %}
+                    </select>
+                    <label for="recommend_category">Recommendation Category</label>
+                </div>
             </div>
-        </div>
-        <!--Short description of recommendation-->
-        <div class="row add-form">
-            <div class="input-field col s12">
-                <i class="fas fa-bars prefix"></i>
-                <textarea id="recommend_info" name="recommend_info" class="materialize-textarea validate" 
-                    minlength="20" maxlength="150" required></textarea>
-                <label for="recommend_info">Brief Description</label>
+            <!--Recommendation name-->
+            <div class="row add-form">
+                <div class="input-field col s12">
+                    <i class="fas fa-tags prefix"></i>
+                    <textarea id="recommend_name" name="recommend_name" class="materialize-textarea validate" minlength="3" maxlength="30" required></textarea>
+                    <label for="recommend_name">Recommendation Name</label>
+                </div>
             </div>
-        </div>
-        <!--Description of recommendation-->
-        <div class="row add-form">
-            <div class="input-field col s12">
-                <i class="fas fa-bars prefix"></i>
-                <textarea id="recommend_description" name="recommend_description" class="materialize-textarea validate" 
-                    minlength="30" maxlength="2000" required></textarea>
-                <label for="recommend_description">Please give us the full details</label>
+            <!--Short description of recommendation-->
+            <div class="row add-form">
+                <div class="input-field col s12">
+                    <i class="fas fa-bars prefix"></i>
+                    <textarea id="recommend_info" name="recommend_info" class="materialize-textarea validate" 
+                        minlength="20" maxlength="150" required></textarea>
+                    <label for="recommend_info">Brief Description</label>
+                </div>
             </div>
-        </div>
-        <!--Image link-->
-        <div class="row add-form">
-            <div class="input-field col s12">
-                <i class="fas fa-camera prefix"></i>
-                <textarea id="recommend_image" name="recommend_image" class="materialize-textarea validate" required></textarea>
-                <label for="recommend_image">Please provide an image link</label>
+            <!--Description of recommendation-->
+            <div class="row add-form">
+                <div class="input-field col s12">
+                    <i class="fas fa-bars prefix"></i>
+                    <textarea id="recommend_description" name="recommend_description" class="materialize-textarea validate" 
+                        minlength="30" maxlength="2000" required></textarea>
+                    <label for="recommend_description">Please give us the full details</label>
+                </div>
             </div>
-        </div>
-        <!--Due date selector-->
-        <div class="row add-form">
-            <div class="input-field col s12">
-                <i class="fas fa-calendar-check prefix"></i>
-                <input id="recommend_date" name="recommend_date" type="text" class="datepicker" required>
-                <label for="recommend_date">Today's Date</label>
+            <!--Image link-->
+            <div class="row add-form">
+                <div class="input-field col s12">
+                    <i class="fas fa-camera prefix"></i>
+                    <textarea id="recommend_image" name="recommend_image" class="materialize-textarea validate" required></textarea>
+                    <label for="recommend_image">Please provide an image link</label>
+                </div>
             </div>
-        </div>
-        <!--Submit button-->
-        <div class="row">
-            <div class="col s12 center-align">
-                <button class="btn waves-effect waves-light" type="submit">Submit
+            <!--Due date selector-->
+            <div class="row add-form">
+                <div class="input-field col s12">
+                    <i class="fas fa-calendar-check prefix"></i>
+                    <input id="recommend_date" name="recommend_date" type="text" class="datepicker" required>
+                    <label for="recommend_date">Today's Date</label>
+                </div>
+            </div>
+            <!--Submit button-->
+            <div class="row">
+                <div class="col s12 center-align">
+                    <button class="btn waves-effect waves-light" type="submit">Submit
                     <i class="fas fa-sign-in-alt"></i>
-                </button>
-                <a href="{{ url_for('profile', username=session['user']) }}" class="waves-effect waves-light btn">Cancel</a>
+                    </button>
+                    <a href="{{ url_for('profile', username=session['user']) }}" class="waves-effect waves-light btn">Cancel</a>
+                </div>
             </div>
-        </div>
-    </form>
-  </div>
-  </div>
-
-    <!-- Button to take the user back to the top of the page -->
-    <div class="col s12 m6 center-align top-btn">
-        <a href="#" class="waves-effect waves-light btn">Back to top</a>
+        </form>
     </div>
-
-
-
-
-
-
-
-
-
-
+</div>
+<!-- Button to take the user back to the top of the page -->
+<div class="col s12 m6 center-align top-btn">
+    <a href="#" class="waves-effect waves-light btn">Back to top</a>
+</div>
 {% endblock %}

@@ -1,5 +1,5 @@
 # Milestone Project 3 - Explore London 
-View the live project here 
+View the deployed live project [here](https://explore-london.herokuapp.com/)
 ***
 
 ## Table Of Contents

@@ -1,77 +1,72 @@
 {% extends "base.html" %}
-
 {% block content %}
-    <!-- Hero image -->
-    <div class="hero-image"></div>
-
-    <div class="container card-container" id="card-wrapper">
-        <div class="row center-align raleway">
-            <div class="col s12 card-heading bold text-color">
-                <span>Welcome To Explore London</span>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col s12 m10 offset-m1 raleway text-color card-content">
-                <p>Explore London is a place where you can find the best places to stay, eat, 
-                    drink and explore in the wonderful English capitol. London is renowned worldwide for it’s 
-                    traditional pubs, resteraunts and tourist attractions.<br>
-                <br>
-                Explore the recommendations below or feel free to add your own. </p>
-            </div>
+<!-- Hero image -->
+<div class="hero-image"></div>
+<div class="container card-container" id="card-wrapper">
+    <div class="row center-align raleway">
+        <div class="col s12 card-heading bold text-color">
+            <span>Welcome To Explore London</span>
         </div>
     </div>
-
-    <!-- For loop to pull data from MongoDB and create category cards -->
-    <div class="container" id="categories-wrapper">
+    <div class="row">
+        <div class="col s12 m10 offset-m1 raleway text-color card-content">
+            <p>Explore London is a place where you can find the best places to stay, eat, 
+                drink and explore in the wonderful English capitol. London is renowned worldwide for it’s 
+                traditional pubs, resteraunts and tourist attractions.<br>
+                <br>
+                Explore the recommendations below or feel free to add your own. 
+            </p>
+        </div>
+    </div>
+</div>
+<!-- For loop to pull data from MongoDB and create category cards -->
+<div class="container" id="categories-wrapper">
     <div class="row">
         {% for category in categories %}
         <a href="{{ url_for('filter_categories', recommend_category=category.category_name) }}#recommendations-wrapper">
-        <div class="col m6 xl3 s6">
-            <div class="card shadow">
-                <div class="card-image">
-                    <img src="{{ category.category_image }}" alt="{{ category.category_name }}">
-                </div>
-                <div class="card-title text-color raleway bold">
-                    <h2>{{ category.category_name }}</h2>
-                </div>
-                <div class="card-info raleway text-color hide-on-small-only">
-                    <p>{{ category.category_info }}</p>
+            <div class="col m6 xl3 s6">
+                <div class="card shadow">
+                    <div class="card-image">
+                        <img src="{{ category.category_image }}" alt="{{ category.category_name }}">
+                    </div>
+                    <div class="card-title text-color raleway bold">
+                        <h2>{{ category.category_name }}</h2>
+                    </div>
+                    <div class="card-info raleway text-color hide-on-small-only">
+                        <p>{{ category.category_info }}</p>
+                    </div>
                 </div>
             </div>
-        </div>
         </a>
         {% endfor %}
     </div>
-    </div>
-
-    <!-- This section enables the user to search the recommendations -->
-    <div class="container search-bar-wrapper shadow" id="search-bar">
-        <form action="{{url_for('search') }}#recommendations-wrapper" method="POST" class="col s12">
-            <div class="row search-form">
-                <div class="input-field col s12">
-                    <i class="fas fa-search prefix"></i>
-                    <textarea id="query" name="query" class="materialize-textarea validate" minlength="3" maxlength="30" required></textarea>
+</div>
+<!-- This section enables the user to search the recommendations -->
+<div class="container search-bar-wrapper shadow" id="search-bar">
+    <form action="{{url_for('search') }}#recommendations-wrapper" method="POST" class="col s12">
+        <div class="row search-form">
+            <div class="input-field col s12">
+                <i class="fas fa-search prefix"></i>
+                <textarea id="query" name="query" class="materialize-textarea validate" minlength="3" maxlength="30" required></textarea>
                 <label for="query">Search Recommendations</label>
-                </div>
             </div>
-            
-            <!-- These buttons allow the user to search or reset the recommendations -->
-            <div class="row">
-                <div class="col s12 center-align">
-                    <button class="btn waves-effect waves-light" type="submit">Search
-                        <i class="fas fa-search"></i>
-                    </button>
-                    <a href="{{ url_for('get_categories') }}#search-bar" class="waves-effect waves-light btn">Reset</a>
-                </div>
-            </div>
-        </form>
-    </div>
-    
-    <!-- For loop to pull the recommendations data from the data base and display it -->
-    <div class="container" id="recommendations-wrapper">
+        </div>
+        <!-- These buttons allow the user to search or reset the recommendations -->
         <div class="row">
-            {% for recommendation in recommendations %}
-            <a href="{{ url_for('view_recommendation', recommendation_id=recommendation._id) }}">
+            <div class="col s12 center-align">
+                <button class="btn waves-effect waves-light" type="submit">Search
+                <i class="fas fa-search"></i>
+                </button>
+                <a href="{{ url_for('get_categories') }}#search-bar" class="waves-effect waves-light btn">Reset</a>
+            </div>
+        </div>
+    </form>
+</div>
+<!-- For loop to pull the recommendations data from the data base and display it -->
+<div class="container" id="recommendations-wrapper">
+    <div class="row">
+        {% for recommendation in recommendations %}
+        <a href="{{ url_for('view_recommendation', recommendation_id=recommendation._id) }}">
             <div class="col s12 m6 xl4">
                 <div class="recommendations raleway text-color shadow">
                     <div class="recommendations-image">
@@ -91,16 +86,12 @@
                     </div>
                 </div>
             </div>
-            </a>
-            {% endfor %}
-        </div>
+        </a>
+        {% endfor %}
     </div>
-
-    <!--This button takes the user back to the top of the page -->
-    <div class="col s12 m6 center-align top-btn">
-        <a href="#" class="waves-effect waves-light btn">Back to top</a>
-    </div>
-    
-    
-
+</div>
+<!--This button takes the user back to the top of the page -->
+<div class="col s12 m6 center-align top-btn">
+    <a href="#" class="waves-effect waves-light btn">Back to top</a>
+</div>
 {% endblock %}

@@ -2,7 +2,6 @@
 {% block styles %}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/profile.css') }}" type="text/css">
 {% endblock %}
-
 {% block content %}
 <!-- Hero image which displays welcome message for session user -->
 <div class="row profile-hero-image">
@@ -10,8 +9,6 @@
         <h2>Welcome {{ session.user }}</h2>
     </div>
 </div>
-
-
 <!-- Welcome message section -->
 <div class="container">
     <div class="row">
@@ -19,7 +16,8 @@
             <div class="profile-text">
                 <p>Welcome {{ session.user }}, we hope that Explore London helps you to discover some new and exciting places 
                     to enjoy accross the city of London. Also please feel free to contribute any recomendations of your own, 
-                    we will look forward to seeing them. </p>
+                    we will look forward to seeing them. 
+                </p>
             </div>
             <div class="recommendation-btn center-align">
                 <a href="{{ url_for('add_recommendation') }}" class="waves-effect waves-light btn">Add Recommendation</a>
@@ -27,7 +25,6 @@
         </div>
     </div>
 </div>
-
 <!--Page heading -->
 <div class="container">
     <div class="row">
@@ -36,30 +33,27 @@
         </div>
     </div>
 </div>
-
 <!--The following code to get the falsh messages is taken from the walkthrough project-->
-    <section>
-        <!--Flash messages-->
-        {% with messages = get_flashed_messages() %}
-            {% if messages %}
-                {% for message in messages %}
-                    <div class="row flashes">
-                        <h4 class="center-align raleway bold">{{ message }}</h4>
-                    </div>
-                {% endfor %}
-            {% endif %}
-        {% endwith %}
-    </section>
-
+<section>
+    <!--Flash messages-->
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    {% for message in messages %}
+    <div class="row flashes">
+        <h4 class="center-align raleway bold">{{ message }}</h4>
+    </div>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+</section>
 <!-- For loop to get the recommendations of the session user and display them on their profile -->
 <div class="container" id="recommendations-wrapper">
-        <div class="row">
-            {% for recommendation in recommendations %}
-            {% if session.user|lower == recommendation.created_by|lower %} 
-            
-            <div class="col s12 m4">
-                <div class="recommendations raleway text-color shadow">
-                    <a href="{{ url_for('view_recommendation', recommendation_id=recommendation._id) }}">
+    <div class="row">
+        {% for recommendation in recommendations %}
+        {% if session.user|lower == recommendation.created_by|lower %} 
+        <div class="col s12 m4">
+            <div class="recommendations raleway text-color shadow">
+                <a href="{{ url_for('view_recommendation', recommendation_id=recommendation._id) }}">
                     <div class="recommendations-image">
                         <img src="{{ recommendation.recommend_image }}" alt="">
                     </div>
@@ -72,32 +66,29 @@
                     <div class="recommendations-info">
                         <p>{{ recommendation.recommend_info }}</p>
                     </div>
-                    </a>
-                    <div class="recommendation-buttons center-align" id="button">
-                        <a href="{{ url_for('edit_recommendation', recommendation_id=recommendation._id) }}" class="waves-effect waves-light btn">Edit</a>
-                        <a href="#modal{{loop.index}}" class="waves-effect waves-light btn modal-trigger">Delete</a>
+                </a>
+                <div class="recommendation-buttons center-align" id="button">
+                    <a href="{{ url_for('edit_recommendation', recommendation_id=recommendation._id) }}" class="waves-effect waves-light btn">Edit</a>
+                    <a href="#modal{{loop.index}}" class="waves-effect waves-light btn modal-trigger">Delete</a>
+                </div>
+                <!--I got the idea to use {{loop.index}} from https://github.com/adamdelancey/ms3-tips/blob/master/templates/profile.html-->
+                <div id="modal{{loop.index}}" class="modal">
+                    <div class="modal-content">
+                        <h4>Are you sure you would like to delete {{ recommendation.recommend_name }}</h4>
                     </div>
-                    <!--I got the idea to use {{loop.index}} from https://github.com/adamdelancey/ms3-tips/blob/master/templates/profile.html-->
-                    <div id="modal{{loop.index}}" class="modal">
-                        <div class="modal-content">
-                            <h4>Are you sure you would like to delete {{ recommendation.recommend_name }}</h4>
-                        </div>
-                        <div class="modal-footer">
-                            <a href="{{ url_for('delete_recommendation', recommendation_id=recommendation._id) }}#recommendations-wrapper" class="modal-close waves-effect waves-green btn-flat">Yes</a>
-                            <a href="{{ url_for('profile', username=session['user']) }}" class="modal-close waves-effect waves-green btn-flat">Cancel</a>
-                        </div>
+                    <div class="modal-footer">
+                        <a href="{{ url_for('delete_recommendation', recommendation_id=recommendation._id) }}#recommendations-wrapper" class="modal-close waves-effect waves-green btn-flat">Yes</a>
+                        <a href="{{ url_for('profile', username=session['user']) }}" class="modal-close waves-effect waves-green btn-flat">Cancel</a>
                     </div>
                 </div>
             </div>
-            
-            {% endif %}
-            {% endfor %}
         </div>
+        {% endif %}
+        {% endfor %}
     </div>
-
-    <!--This button takes the user back to the top of the page -->
-    <div class="col s12 m6 center-align top-btn">
-        <a href="#" class="waves-effect waves-light btn">Back to top</a>
-    </div>
-
+</div>
+<!--This button takes the user back to the top of the page -->
+<div class="col s12 m6 center-align top-btn">
+    <a href="#" class="waves-effect waves-light btn">Back to top</a>
+</div>
 {% endblock %}
