@@ -319,7 +319,7 @@ def page_forbidden(e):
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
-            port=int(os.environ.get("PORT")), debug=True)
+            port=int(os.environ.get("PORT")), debug=False)
 
 
 # ** Sources of guidance used to create this code **
