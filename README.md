@@ -48,7 +48,7 @@ plan what they are going to do during their stay in the city.
 
 The main aim for me was to create an app that had an intuitive user interface and created a sense of community amongst its users. 
 
-This project was my third Milestone Project as part of the Diploma in Software Development at Code Institute.
+This project was my third Milestone Project as part of the Diploma in Full Stack Software Development at Code Institute.
 
 ## User Experience
 
