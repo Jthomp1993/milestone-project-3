@@ -374,7 +374,7 @@ I have not shown these above for security reasons.)
 * git add .
 * git commit -m ""
 
-6. The next step was to login into Heroku within the termianl using the following command: 
+6. The next step was to log into Heroku within the termianl using the following command: 
 * heroku login 
 
 7. Next I linked my Heroku app using the following command:
